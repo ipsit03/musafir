@@ -62,3 +62,6 @@ const RideDetail = () => {
 };
 
 export default RideDetail;
+
+
+//updated ride detail page

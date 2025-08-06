@@ -36,11 +36,15 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-blue-400" />
-                info@musafir.com
+                musafirtravelco2024@gmail.com
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-blue-400" />
-                +91 98765 43210
+                +91 8917506443
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-blue-400" />
+                +91 8918870969
               </li>
             </ul>
           </div>

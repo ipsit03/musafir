@@ -10,6 +10,7 @@ import {
   CheckCircle,
   XCircle,
   Info,
+  Megaphone,
 } from "lucide-react";
 import { rideData } from "../data/rides";
 
@@ -72,6 +73,28 @@ const RideDetail = () => {
                 </div>
               )}
             </div>
+
+            {/* 📣 Booking Announcement */}
+            {ride.announcement && (
+              <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg mb-6 flex items-start">
+                <Megaphone className="h-5 w-5 mr-2 mt-1 text-yellow-600" />
+                <span className="text-sm font-medium">{ride.announcement}</span>
+              </div>
+            )}
+
+            {/* 🟦 Book Now Button (only if booking link exists) */}
+            {ride.bookingLink && (
+              <div className="mb-8">
+                <a
+                  href={ride.bookingLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200"
+                >
+                  Book Now →
+                </a>
+              </div>
+            )}
 
             {/* Itinerary */}
             {ride.itinerary && (

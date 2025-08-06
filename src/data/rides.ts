@@ -1,5 +1,3 @@
-// src/data/rides.ts
-
 export type Ride = {
   id: string;
   title: string;
@@ -16,6 +14,8 @@ export type Ride = {
   inclusions?: string[];
   exclusions?: string[];
   notes?: string[];
+  announcement?: string;
+  bookingLink?: string;
 };
 
 export const rideData: Record<string, Ride> = {
@@ -31,6 +31,8 @@ export const rideData: Record<string, Ride> = {
     altitude: "Up to 17,500 ft (Khardung La)",
     mode: "Train + Road (SUV/Tempo)",
     image: "/ladakh.png",
+    announcement: "📣 Bookings open from 8th August until 3rd week of September 2025!",
+    bookingLink: "https://your-google-form-link.com", // 🔁 Replace this with the actual form
     itinerary: [
       "Day 1: Train from Burdwan to Chandigarh (30+ hrs)",
       "Day 2: Full day onboard train",
@@ -76,45 +78,50 @@ export const rideData: Record<string, Ride> = {
     id: "arunachal-explorer",
     title: "Arunachal–Kaziranga Explorer",
     description:
-      "Explore the monasteries, valleys, and national parks of North-East India on this 10-night adventure.",
+      "Explore the monasteries, valleys, and national parks of North-East India on this 10-night backpacking adventure.",
     duration: "10 Nights / 11 Days",
-    groupSize: "10–16 people",
-    location: "Start: Guwahati | End: Guwahati",
-    date: "Dec 2025 (Flexible batches)",
-    mode: "SUV / Tempo Traveller",
+    groupSize: "10–15 people",
+    location: "Start & End: Burdwan (Train via Guwahati)",
+    date: "December 2025",
+    mode: "Train + Road (Tempo Traveller/Innova)",
     image: "/arunachal.png",
+    announcement: "📣 Booking details and pricing for this trip will be announced during Durga Puja 2025!",
     itinerary: [
-      "Day 1: Arrive in Guwahati and transfer to Nameri",
-      "Day 2: Nameri to Dirang – explore Dirang Valley",
-      "Day 3: Dirang to Tawang via Sela Pass",
-      "Day 4: Tawang sightseeing: Monastery, War Memorial, Market",
-      "Day 5: Tawang to Bumla Pass & Madhuri Lake (permit required)",
-      "Day 6: Tawang to Bomdila",
-      "Day 7: Bomdila to Kaziranga National Park",
-      "Day 8: Jeep safari in Kaziranga – spot rhinos, elephants",
-      "Day 9: Kaziranga to Shillong – leisure day",
-      "Day 10: Shillong sightseeing (Elephant Falls, Ward's Lake)",
-      "Day 11: Return to Guwahati for departure",
+      "Day 1: Burdwan → Guwahati (Train Travel)",
+      "Day 2: Guwahati → Sangti Valley (via Tezpur, Bhalukpong, Bomdila)",
+      "Day 3: Sangti → Tawang via Sela Pass",
+      "Day 4: Tawang sightseeing – Monastery, Giant Buddha, War Memorial",
+      "Day 5: Day trip to Bumla Pass, P.T. Tso & Madhuri Lake",
+      "Day 6: Tawang → Dirang – Hot Springs & Monastery",
+      "Day 7: Dirang → Kaziranga (via Bomdila & Tezpur)",
+      "Day 8: Jeep Safari in Kaziranga + travel to Guwahati",
+      "Day 9: Kamakhya Temple visit + Train to Burdwan",
+      "Day 10: Arrival in Burdwan",
     ],
     inclusions: [
-      "All accommodation: hotels/homestays",
-      "Transportation by Tempo Traveller/SUV",
-      "Breakfast & dinner (Day 2 to Day 10)",
-      "Sightseeing as per itinerary",
-      "Permits for Bumla Pass, Inner Line Permits",
-      "Experienced trip leader & local guides",
+      "Train fare (Sleeper Class) Burdwan ↔ Guwahati",
+      "All road transfers & sightseeing in Arunachal & Assam (shared group vehicle)",
+      "Accommodation in budget homestays, lodges & hostels (twin/triple sharing)",
+      "ILP for Arunachal Pradesh",
+      "Driver allowances, parking, tolls & fuel",
+      "Group leader / trip coordinator from Musafir",
     ],
     exclusions: [
-      "Lunches, snacks, drinks",
-      "Safari entry fees & camera permits",
-      "Tips & personal expenses",
-      "Travel insurance",
+      "Meals (except where homestay includes breakfast/dinner)",
+      "Jeep Safari charges in Kaziranga",
+      "Local army vehicle for Bumla Pass",
+      "Entry fees to monuments / sites",
+      "Camera/video charges (if applicable)",
+      "Personal expenses (laundry, tips, extra snacks, bottled water)",
+      "Any transport or stay outside itinerary due to weather/roadblocks",
+      "Travel insurance or medical expenses",
     ],
     notes: [
-      "Carry photo ID for inner line permits",
-      "Warm clothes needed in Tawang (high altitude)",
-      "Binoculars recommended for Kaziranga safari",
-      "Travel light due to long drives and hilly terrain",
+      "ILP (Inner Line Permit) required for Arunachal – will be arranged",
+      "One dedicated vehicle for entire Arunachal trip",
+      "Best time to travel: March–May & October–early December",
+      "Eat local – dhabas offer cheap & tasty meals (thukpa, momos, dal-rice)",
+      "Trip budget, pricing & booking will be announced during Durga Puja 2025",
     ],
   },
 };

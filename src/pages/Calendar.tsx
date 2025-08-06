@@ -1,18 +1,23 @@
-// src/pages/Calendar.tsx
 import React, { useState } from "react";
-import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, addDays, isSameMonth, isSameDay } from "date-fns";
+import {
+  format,
+  addMonths,
+  subMonths,
+  startOfMonth,
+  endOfMonth,
+  startOfWeek,
+  endOfWeek,
+  addDays,
+  isSameMonth,
+  isSameDay,
+} from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Static ride dates (could be dynamically loaded later)
 const rideDates = [
-  {
-    date: new Date("2025-10-03"), // Leh–Ladakh
-    id: "leh-ladakh",
-  },
-  {
-    date: new Date("2025-12-25"), // Arunachal
-    id: "arunachal-explorer",
-  },
+  { date: new Date("2025-10-03"), id: "leh-ladakh" },
+  { date: new Date("2025-12-25"), id: "arunachal-explorer" },
 ];
 
 const Calendar = () => {
@@ -37,7 +42,9 @@ const Calendar = () => {
       <button onClick={prevMonth} className="p-2 hover:bg-gray-100 rounded-lg">
         <ChevronLeft className="h-6 w-6 text-gray-600" />
       </button>
-      <h2 className="text-2xl font-semibold text-gray-900">{format(currentMonth, "MMMM yyyy")}</h2>
+      <h2 className="text-2xl font-semibold text-gray-900">
+        {format(currentMonth, "MMMM yyyy")}
+      </h2>
       <button onClick={nextMonth} className="p-2 hover:bg-gray-100 rounded-lg">
         <ChevronRight className="h-6 w-6 text-gray-600" />
       </button>
@@ -45,50 +52,57 @@ const Calendar = () => {
   );
 
   const renderDays = () => {
-    const start = startOfWeek(currentMonth, { weekStartsOn: 0 });
-    const end = endOfMonth(currentMonth);
+    const startDate = startOfWeek(startOfMonth(currentMonth), { weekStartsOn: 0 });
+    const endDate = endOfWeek(endOfMonth(currentMonth), { weekStartsOn: 0 });
+
     const rows = [];
+    let current = startDate;
 
-    let days = [];
-    let day = start;
-    let formattedDate = "";
+    while (current <= endDate) {
+      const days = [];
 
-    while (day <= end || days.length % 7 !== 0) {
       for (let i = 0; i < 7; i++) {
-        const currentDay = addDays(day, i);
-        formattedDate = format(currentDay, "d");
+        const formattedDate = format(current, "d");
+        const isRideDay = rideDates.find((ride) => isSameDay(ride.date, current));
+        const isInactive = !isSameMonth(current, currentMonth);
 
-        const isRideDay = rideDates.find((ride) => isSameDay(ride.date, currentDay));
-        const isInactive = !isSameMonth(currentDay, currentMonth);
+        const baseClasses =
+          "text-sm h-10 w-10 flex items-center justify-center rounded-full transition";
+        const textColor = isInactive ? "text-gray-300" : "text-gray-800";
+        const rideClasses = isRideDay
+          ? "bg-blue-600 text-white hover:bg-blue-700"
+          : textColor;
+
+        const dayContent = (
+          <div className={`${baseClasses} ${rideClasses}`}>
+            {formattedDate}
+          </div>
+        );
 
         days.push(
-          <div
-            key={currentDay.toString()}
-            className={`text-sm flex justify-center items-center h-10 w-10 rounded-full transition ${
-              isRideDay
-                ? "bg-blue-600 text-white hover:bg-blue-700"
-                : isInactive
-                ? "text-gray-300"
-                : "text-gray-800"
-            }`}
-          >
+          <div key={current.toString()} className="flex justify-center items-center">
             {isRideDay ? (
-              <Link to={`/rides/${isRideDay.id}`}>{formattedDate}</Link>
+              <Link
+                to={`/rides/${isRideDay.id}`}
+                className="h-10 w-10 block"
+                title={`View ${isRideDay.id.replace("-", " ")} ride details`}
+              >
+                {dayContent}
+              </Link>
             ) : (
-              formattedDate
+              dayContent
             )}
           </div>
         );
 
-        day = addDays(day, 1);
+        current = addDays(current, 1);
       }
 
       rows.push(
-        <div key={day.toString()} className="grid grid-cols-7 gap-2 mb-2">
+        <div key={current.toString()} className="grid grid-cols-7 gap-2 mb-2">
           {days}
         </div>
       );
-      days = [];
     }
 
     return <div>{rows}</div>;
@@ -106,9 +120,19 @@ const Calendar = () => {
 
         <div className="bg-white rounded-xl shadow-lg p-8">
           {renderHeader()}
+
+          {/* Weekday Headings */}
           <div className="grid grid-cols-7 text-sm font-medium text-gray-500 mb-4 text-center">
-            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
           </div>
+
+          {/* Calendar Grid */}
           {renderDays()}
         </div>
       </div>

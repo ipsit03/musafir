@@ -23,7 +23,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">info@musafir.com</p>
+                  <p className="text-gray-600">musafirtravelco2024@gmail.com</p>
                 </div>
               </div>
 
@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">+91 8917506443, +91 8918870969</p>
                 </div>
               </div>
 
@@ -44,8 +44,8 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">Office</h3>
                   <p className="text-gray-600">
-                    123 Travel Street<br />
-                    New Delhi, India 110001
+                    Burdwan,<br />
+                    West Bengal, India 713104
                   </p>
                 </div>
               </div>

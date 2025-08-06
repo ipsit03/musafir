@@ -32,7 +32,7 @@ export const rideData: Record<string, Ride> = {
     mode: "Train + Road (SUV/Tempo)",
     image: "/ladakh.png",
     announcement: "📣 Bookings open from 8th August until 3rd week of September 2025!",
-    bookingLink: "https://your-google-form-link.com", // 🔁 Replace this with the actual form
+    bookingLink: "https://docs.google.com/forms/d/e/1FAIpQLScnioIBrPJBlWQ-AvCPqBGJjENVCjj-CG_b9YWS4GeC-3oi4A/viewform?usp=dialog", // 🔁 Replace this with the actual form
     itinerary: [
       "Day 1: Train from Burdwan to Chandigarh (30+ hrs)",
       "Day 2: Full day onboard train",

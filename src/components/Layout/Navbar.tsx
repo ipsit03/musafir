@@ -20,12 +20,18 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <MapPin className="h-7 w-7 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900 tracking-tight">
-              Musafir.com
-            </span>
-          </Link>
+          <Link to="/" className="flex items-center space-x-3">
+  <img
+  src="/musafir-logo.png"
+  alt="Musafir Logo"
+  className="h-10 w-auto object-contain md:h-12 lg:h-14 transition-transform duration-300 hover:scale-105"
+/>
+  <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 transition-all duration-300">
+    Musafir.com
+  </span>
+</Link>
+
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">

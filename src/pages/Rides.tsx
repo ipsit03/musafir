@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { rideData } from "../data/rides";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Rides = () => {
   const ridesArray = Object.values(rideData);
-  const [searchQuery, setSearchQuery] = useState("");
+  const location = useLocation();
 
-  const filteredRides = ridesArray.filter((ride) =>
-    ride.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Extract query string from URL (?q=ladakh)
+  const queryParam = new URLSearchParams(location.search).get("q") || "";
+  const [searchQuery, setSearchQuery] = useState(queryParam);
+
+  // Update local state if URL changes (back/forward navigation)
+  useEffect(() => {
+    setSearchQuery(queryParam);
+  }, [queryParam]);
+
+  const filteredRides = ridesArray.filter((ride) => {
+    const lowerQuery = searchQuery.toLowerCase();
+    return (
+      ride.title.toLowerCase().includes(lowerQuery) ||
+      ride.location.toLowerCase().includes(lowerQuery)
+    );
+  });
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -64,7 +77,9 @@ const Rides = () => {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-500">No rides found for your search.</p>
+          <p className="text-center text-gray-500">
+            No rides found for your search.
+          </p>
         )}
       </div>
     </div>

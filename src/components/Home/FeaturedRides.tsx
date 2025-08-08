@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 const cardBaseClasses =
   "flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden";
-const cardWidthClasses =
-  "min-w-[250px] sm:min-w-[300px] lg:min-w-[350px]";
+const cardWidthClasses = "min-w-[250px] sm:min-w-[300px] lg:min-w-[350px]";
 const imageHeightClasses = "h-40 sm:h-44 lg:h-48 object-cover";
 const titleClasses = "text-lg sm:text-xl font-semibold text-gray-900 mb-2";
-const descClasses = "text-gray-700 text-xs sm:text-sm mb-3";
-const listClasses = "list-disc list-inside text-gray-600 text-xs sm:text-sm mb-4";
+const descClasses =
+  "text-gray-700 text-xs sm:text-sm mb-3 whitespace-normal break-words max-w-full";
+const listClasses =
+  "list-disc list-inside text-gray-600 text-xs sm:text-sm mb-4 whitespace-normal break-words";
 const buttonClasses =
   "inline-block bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-blue-700 text-xs sm:text-sm";
 

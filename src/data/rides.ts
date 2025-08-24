@@ -76,7 +76,7 @@ export const rideData: Record<string, Ride> = {
 
   "arunachal-explorer": {
     id: "arunachal-explorer",
-    title: "Arunachal–Kaziranga Explorer",
+    title: "MUSAFIRxARUNACHAL-KAZIRANGA EXPLORER",
     description:
       "Explore the monasteries, valleys, and national parks of North-East India on this 10-night backpacking adventure.",
     duration: "10 Nights / 11 Days",
@@ -126,7 +126,7 @@ export const rideData: Record<string, Ride> = {
   },
   "meghalaya-expedition": {
     id: "meghalaya-expedition",
-    title: "Musafir Offbeat Meghalaya Expedition",
+    title: "MUSAFIRxOFFBEAT MEGHALAYA EXPEDITION",
     description:
       "From sacred groves and cleanest villages to root bridges and riverside stays — experience the lush charm of Meghalaya in 7 days.",
     duration: "6 Nights / 7 Days",
@@ -172,7 +172,7 @@ export const rideData: Record<string, Ride> = {
   },
   "varanasi-sacred-circle": {
     id: "varanasi-sacred-circle",
-    title: "The Sacred Circle: Varanasi, Ayodhya & Prayagraj",
+    title: "THE SACRED CIRCLE: VARANASI, AYODHYA & PRAYAGRAJ",
     description:
       "A 6-day spiritual and cultural journey across India's holy cities — Varanasi, Sarnath, Ayodhya, and Prayagraj — filled with temples, rituals, food trails and ghats.",
     duration: "5 Nights / 6 Days",
@@ -220,7 +220,7 @@ export const rideData: Record<string, Ride> = {
   },
   "meghalaya-bike-expedition": {
     id: "meghalaya-bike-expedition",
-    title: "Meghalaya Bike Expedition 2026",
+    title: "MUSAFIRxMEGHALAYA BIKE EXPEDITION 2026",
     description:
       "An adventurous 9-night bike ride through Meghalaya's rivers, waterfalls, and hidden villages – for true explorers.",
     duration: "9 Nights / 10 Days",
@@ -268,7 +268,7 @@ export const rideData: Record<string, Ride> = {
   },
   "himachal-group-tour": {
     id: "himachal-group-tour",
-    title: "Shimla–Manali–Kasol Group Tour",
+    title: "MUSAFIRxSHIMLA-MANALI-KASOL GROUP TOUR",
     description:
       "A scenic 10-day journey through Himachal's pine valleys, rivers, snow passes, and cafes — from Shimla to Manali, Solang, Rohtang, and Kasol.",
     duration: "9 Nights / 10 Days",
@@ -316,7 +316,7 @@ export const rideData: Record<string, Ride> = {
   },
   "nagaland-winter-expedition": {
   id: "nagaland-winter-expedition",
-  title: "Nagaland Winter Expedition & Hornbill Festival",
+  title: "MUSAFIRxNAGALAND WINTER EXPEDITION AND HORNBILL FESTIVAL",
   description:
     "Experience Nagaland's tribal traditions, Hornbill Festival, and Dzukou Valley on this immersive 8-day trip.",
   duration: "7 Nights / 8 Days",

@@ -51,7 +51,7 @@ const Home = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Arunachal Explorer
+                  MusafirxArunachal Explorer
                 </h3>
                 <p className="text-gray-700 text-sm mb-3">
                   A 10-night expedition through the mountains, monasteries, and wildlife parks of North-East India.
@@ -80,7 +80,7 @@ const Home = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Meghalaya Expedition
+                  MusafirxMeghalaya Expedition
                 </h3>
                 <p className="text-gray-700 text-sm mb-3">
                   A 7-day adventure through sacred groves, root bridges, and the crystal waters of Dawki and Nongriat.
@@ -137,7 +137,7 @@ const Home = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Meghalaya Bike Expedition
+                  MusafirxMeghalaya Bike Expedition
                 </h3>
                 <p className="text-gray-700 text-sm mb-3">
                   Ride to rivers, waterfalls, remote camps & villages across Meghalaya — bike through clouds & pine forests.
@@ -165,7 +165,7 @@ const Home = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Himachal Group Tour
+                  MusafirxHimachal Group Tour
                 </h3>
                 <p className="text-gray-700 text-sm mb-3">
                   A scenic 10-day trip through Shimla, Manali & Kasol — pine forests, snow passes & riverside cafes.
@@ -193,7 +193,7 @@ const Home = () => {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Nagaland Winter Expedition
+                  MusafirxNagaland Winter Expedition
                 </h3>
                 <p className="text-gray-700 text-sm mb-3">
                   Witness Hornbill Festival & tribal culture in this 9-day journey through Kohima, Kisama, Dzukou & more.

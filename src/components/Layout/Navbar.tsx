@@ -27,7 +27,7 @@ const Navbar = () => {
   className="h-10 w-auto object-contain md:h-12 lg:h-14 transition-transform duration-300 hover:scale-105"
 />
   <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 transition-all duration-300">
-    Musafir.com
+    MusafirTravelCo
   </span>
 </Link>
 

@@ -21,7 +21,7 @@ export type Ride = {
 export const rideData: Record<string, Ride> = {
   "leh-ladakh": {
     id: "leh-ladakh",
-    title: "MUSAFIRxLADAKH Adventure",
+    title: "MUSAFIRxLADAKH ADVENTURE",
     description:
       "A breathtaking 16-day journey from Burdwan to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung la, Chang la and more.",
     duration: "13 to 16 days",

@@ -15,16 +15,16 @@ const Footer = () => {
               <span className="text-2xl font-bold">Musafir.com</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md mb-4">
-              Discover unforgettable journeys with expert guides. Book your next ride and create memories with Musafir.com.
+              Discover unforgettable journeys with expert guides. Book your next ride and create memories with MusafirTravelCo.
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Facebook" className="text-gray-400 hover:text-blue-400">
+              <a href="https://m.facebook.com/p/Musafir-Travelco-61566600875144/?mibextid=ZbWKwL&ref=xav_pl_fb_external_link_ios&wtsid=rdr_0rJNmphj17olNHsPg" aria-label="Facebook" className="text-gray-400 hover:text-blue-400">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-blue-400">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Instagram" className="text-gray-400 hover:text-blue-400">
+              <a href="https://www.instagram.com/musafirtravelco?igsh=MWZiN2o5dzR2dHEyeQ%3D%3D&utm_source=qr" aria-label="Instagram" className="text-gray-400 hover:text-blue-400">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

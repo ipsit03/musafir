@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from "./components/ScrollToTop";
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import Rides from './pages/Rides';
@@ -10,6 +11,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />   {/* 👈 This fixes the issue */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

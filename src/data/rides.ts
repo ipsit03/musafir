@@ -21,13 +21,13 @@ export type Ride = {
 export const rideData: Record<string, Ride> = {
   "leh-ladakh": {
     id: "leh-ladakh",
-    title: "Mystic Leh–Ladakh Adventure",
+    title: "MUSAFIRxLADAKH Adventure",
     description:
-      "A breathtaking 15-day journey from Burdwan to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali and more.",
-    duration: "13 to 15 days",
+      "A breathtaking 16-day journey from Burdwan to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung la, Chang la and more.",
+    duration: "13 to 16 days",
     groupSize: "8–14 people",
     location: "Burdwan → Chandigarh → Ladakh → Manali → Burdwan",
-    date: "03–17 Oct 2025",
+    date: "To be announced soon",
     altitude: "Up to 17,500 ft (Khardung La)",
     mode: "Train + Road (SUV/Tempo)",
     image: "/ladakh.png",

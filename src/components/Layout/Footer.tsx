@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <MapPin className="h-7 w-7 text-blue-400" />
-              <span className="text-2xl font-bold">Musafir.com</span>
+              <span className="text-2xl font-bold">MusafirTravelCo.org</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md mb-4">
               Discover unforgettable journeys with expert guides. Book your next ride and create memories with MusafirTravelCo.

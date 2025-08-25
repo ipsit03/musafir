@@ -21,9 +21,6 @@ const Footer = () => {
               <a href="https://m.facebook.com/p/Musafir-Travelco-61566600875144/?mibextid=ZbWKwL&ref=xav_pl_fb_external_link_ios&wtsid=rdr_0rJNmphj17olNHsPg" aria-label="Facebook" className="text-gray-400 hover:text-blue-400">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-blue-400">
-                <Twitter className="h-5 w-5" />
-              </a>
               <a href="https://www.instagram.com/musafirtravelco?igsh=MWZiN2o5dzR2dHEyeQ%3D%3D&utm_source=qr" aria-label="Instagram" className="text-gray-400 hover:text-blue-400">
                 <Instagram className="h-5 w-5" />
               </a>

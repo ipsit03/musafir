@@ -5,7 +5,7 @@ const WhyMusafir = () => {
   const features = [
     {
       title: 'Trusted Travel Guides',
-      description: 'Experienced and certified guides who know the destinations inside out',
+      description: 'Experienced guides who know the destinations inside out',
       icon: Shield,
     },
     {
@@ -30,7 +30,7 @@ const WhyMusafir = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Musafir.com
+            Why Choose MusafirTravelCo.org
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We make travel planning simple, safe, and memorable

@@ -7,6 +7,8 @@ import Rides from './pages/Rides';
 import RideDetail from './pages/RideDetail';
 import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
+import BackToTop from "./components/BackToTop";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="rides/:id" element={<RideDetail />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
+       <BackToTop /> {/* 👈 Now visible on all pages */}
     </Router>
   );
 }

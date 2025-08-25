@@ -16,6 +16,10 @@ export type Ride = {
   notes?: string[];
   announcement?: string;
   bookingLink?: string;
+  price: {
+    sleeper: string;
+    ac3: string;
+  };
 };
 
 export const rideData: Record<string, Ride> = {
@@ -72,6 +76,10 @@ export const rideData: Record<string, Ride> = {
       "Pack warm layers, sunscreen, lip balm, ID",
       "Inform trip captain of any medical issues",
     ],
+    price: {
+      sleeper: "₹29,999",
+      ac3: "₹32,999",
+    },
   },
 
   "arunachal-explorer": {
@@ -123,6 +131,10 @@ export const rideData: Record<string, Ride> = {
       "Eat local – dhabas offer cheap & tasty meals (thukpa, momos, dal-rice)",
       "Trip budget, pricing & booking will be announced during Durga Puja 2025",
     ],
+     price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
   },
   "meghalaya-expedition": {
     id: "meghalaya-expedition",
@@ -167,6 +179,10 @@ export const rideData: Record<string, Ride> = {
       "Carry light rain gear, good shoes, and warm layers",
       "Trip pricing & bookings to open soon – follow us for updates!",
     ],
+     price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
     announcement:
       "🌿 Get ready to explore Meghalaya's magic — ride details & bookings will open soon for Winter 2025!",
   },
@@ -215,6 +231,10 @@ export const rideData: Record<string, Ride> = {
       "No alcohol/tobacco near sacred sites",
       "Train routes may vary – final confirmation during booking",
     ],
+     price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
     announcement:
       "🚩 The Sacred Circle ride (Varanasi–Ayodhya–Prayagraj) will commence in early 2026. Booking info coming soon!",
   },
@@ -263,6 +283,10 @@ export const rideData: Record<string, Ride> = {
       "Be prepared for long bike rides & jungle treks",
       "Wear helmets, ride safely – weather can change quickly",
     ],
+     price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
     announcement:
       "🏍️ The Meghalaya Bike Expedition is coming in 2026! Watch this space for bookings soon.",
   },
@@ -311,6 +335,10 @@ export const rideData: Record<string, Ride> = {
       "Expect early morning departures on long-drive days",
       "Carry dry snacks and stay hydrated during transit",
     ],
+     price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
     announcement:
       "❄️ Himachal Group Tour coming in 2026 — bookings and pricing will be released soon!",
   },
@@ -359,6 +387,10 @@ export const rideData: Record<string, Ride> = {
     "Trek requires basic fitness – not suitable for those with knee issues",
     "Hornbill Festival runs 1–10 Dec every year – final dates confirmed closer to trip",
   ],
+   price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
   announcement:
     "🌺 Explore Nagaland during the vibrant Hornbill Festival – bookings for December 2025 open soon!",
 }

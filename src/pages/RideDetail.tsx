@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import BackToTop from "../components/BackToTop";
 import {
   Calendar,
   Users,
@@ -11,6 +12,7 @@ import {
   XCircle,
   Info,
   Megaphone,
+  IndianRupee,
 } from "lucide-react";
 import { rideData } from "../data/rides";
 
@@ -74,6 +76,40 @@ const RideDetail = () => {
               )}
             </div>
 
+            {/* 💰 Price Section */}
+            {ride.price && (
+              <div className="mb-8">
+                <h2 className="text-xl font-semibold text-green-700 flex items-center mb-2">
+                  <IndianRupee className="h-5 w-5 mr-2" /> Price Details
+                </h2>
+
+                {ride.price.sleeper === "To be announced" &&
+                  ride.price.ac3 === "To be announced" ? (
+                  // 🟡 Case: Both are "To be announced"
+                  <p className="text-gray-700 text-sm italic">
+                    To be announced
+                  </p>
+                ) : (
+                  // ✅ Case: Show actual prices
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div className="bg-green-50 p-4 rounded-lg shadow-sm">
+                      <p className="font-medium">Sleeper Class</p>
+                      <p className="text-lg font-bold text-green-800">
+                        {ride.price.sleeper}
+                      </p>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-lg shadow-sm">
+                      <p className="font-medium">3AC Class</p>
+                      <p className="text-lg font-bold text-blue-800">
+                        {ride.price.ac3}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+
             {/* 📣 Booking Announcement */}
             {ride.announcement && (
               <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg mb-6 flex items-start">
@@ -82,7 +118,7 @@ const RideDetail = () => {
               </div>
             )}
 
-            {/* 🟦 Book Now Button (only if booking link exists) */}
+            {/* 🟦 Book Now Button */}
             {ride.bookingLink && (
               <div className="mb-8">
                 <a
@@ -154,6 +190,7 @@ const RideDetail = () => {
           </div>
         </div>
       </div>
+      <BackToTop />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Musafir Getaways", path: "/rides" }, // Non-bike tours
-    { name: "Musafir Bike Rides", path: "/bikerides" }, // Only bike tours
+    { name: "Musafir Bike Expeditions", path: "/bikerides" }, // Only bike tours
     { name: "Calendar", path: "/calendar" },
     { name: "Contact", path: "/contact" },
   ];

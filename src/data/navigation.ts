@@ -6,6 +6,7 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { name: 'Home', path: '/' },
   { name: 'Rides', path: '/rides' },
+   { name: 'Bike Rides', path: '/bikerides' },  
   { name: 'Calendar', path: '/calendar' },
   { name: 'Contact', path: '/contact' },
 ];

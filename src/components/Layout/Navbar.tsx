@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, MapPin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +8,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Musafir Getaways", path: "/rides" },
+    { name: "Musafir Getaways", path: "/rides" }, // Non-bike tours
+    { name: "Musafir Bike Rides", path: "/bikerides" }, // Only bike tours
     { name: "Calendar", path: "/calendar" },
     { name: "Contact", path: "/contact" },
   ];
@@ -21,17 +22,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-  <img
-  src="/musafir-logo.png"
-  alt="Musafir Logo"
-  className="h-10 w-auto object-contain md:h-12 lg:h-14 transition-transform duration-300 hover:scale-105"
-/>
-  <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 transition-all duration-300">
-    MusafirTravelCo
-  </span>
-</Link>
-
-
+            <img
+              src="/musafir-logo.png"
+              alt="Musafir Logo"
+              className="h-10 w-auto object-contain md:h-12 lg:h-14 transition-transform duration-300 hover:scale-105"
+            />
+            <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 transition-all duration-300">
+              MusafirTravelCo
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
@@ -87,5 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-//updated navarbar

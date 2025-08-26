@@ -119,8 +119,9 @@ const RideDetail = () => {
             )}
 
             {/* 🟦 Book Now Button */}
-            {ride.bookingLink && (
-              <div className="mb-8">
+            {/* 🟦 Book Now Button */}
+            <div className="mb-8">
+              {ride.id === "leh-ladakh" ? (
                 <a
                   href={ride.bookingLink}
                   target="_blank"
@@ -129,8 +130,16 @@ const RideDetail = () => {
                 >
                   Book Now →
                 </a>
-              </div>
-            )}
+              ) : (
+                <button
+                  disabled
+                  className="inline-block bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg shadow cursor-not-allowed opacity-70"
+                >
+                  Booking Unavailable
+                </button>
+              )}
+            </div>
+
 
             {/* Itinerary */}
             {ride.itinerary && (

@@ -7,11 +7,9 @@ const Rides = () => {
   const ridesArray = Object.values(rideData);
   const location = useLocation();
 
-  // Extract query string from URL (?q=ladakh)
   const queryParam = new URLSearchParams(location.search).get("q") || "";
   const [searchQuery, setSearchQuery] = useState(queryParam);
 
-  // Update local state if URL changes (back/forward navigation)
   useEffect(() => {
     setSearchQuery(queryParam);
   }, [queryParam]);
@@ -51,24 +49,29 @@ const Rides = () => {
         {/* Rides Grid */}
         {filteredRides.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredRides.map((ride) => (
+            {filteredRides.map((ride, index) => (
               <div
                 key={ride.id}
-                className="rounded-xl shadow-md border border-gray-200 overflow-hidden transition hover:shadow-lg bg-white"
+                className="group rounded-xl shadow-md border border-gray-200 overflow-hidden transition transform hover:scale-[1.02] hover:shadow-2xl bg-white opacity-0 animate-fadeInUp"
+                style={{ animationDelay: `${index * 150}ms` }} // staggered delay
               >
-                <img
-                  src={ride.image}
-                  alt={ride.title}
-                  className="h-48 w-full object-cover"
-                />
+                <div className="overflow-hidden">
+                  <img
+                    src={ride.image}
+                    alt={ride.title}
+                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
                 <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-2">{ride.title}</h2>
+                  <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                    {ride.title}
+                  </h2>
                   <p className="text-sm text-gray-500 mb-1">{ride.date}</p>
                   <p className="text-sm text-gray-500 mb-1">{ride.duration}</p>
                   <p className="text-sm text-gray-600 mb-3">{ride.location}</p>
                   <Link
                     to={`/rides/${ride.id}`}
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:scale-105"
                   >
                     View Details
                   </Link>

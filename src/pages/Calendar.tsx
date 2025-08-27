@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 // Static ride dates (could be dynamically loaded later)
 const rideDates = [
-  { date: new Date("2025-10-03"), id: "leh-ladakh" },
+  { date: new Date("2025-10-31"), id: "leh-ladakh" }, // ✅ updated from 3rd → 31st Oct
   { date: new Date("2025-12-25"), id: "arunachal-explorer" },
 ];
 

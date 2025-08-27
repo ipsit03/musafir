@@ -72,7 +72,7 @@ const BikeRides = () => {
                   <p className="text-sm text-gray-500 mb-1">{ride.duration}</p>
                   <p className="text-sm text-gray-600 mb-3">{ride.location}</p>
                   <Link
-                    to={`/rides/${ride.id}`}
+                    to={`/bikerides/${ride.id}`} // ✅ fixed route
                     className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
                   >
                     View Details

@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import BackToTop from "./components/BackToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import BikeRides from "./pages/BikeRides";
+import BikeRideDetail from "./pages/BikeRideDetails";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="rides" element={<Rides />} />
            <Route path="/bikerides" element={<BikeRides />} />
           <Route path="rides/:id" element={<RideDetail />} />
+          <Route path="/bikerides/:id" element={<BikeRideDetail />} /> 
           <Route path="calendar" element={<Calendar />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

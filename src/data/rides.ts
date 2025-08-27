@@ -31,7 +31,7 @@ export const rideData: Record<string, Ride> = {
     duration: "13 to 16 days",
     groupSize: "8–14 people",
     location: "Burdwan → Chandigarh → Ladakh → Manali → Burdwan",
-    date: "To be announced soon",
+    date: "31st October to 15th November 2025",
     altitude: "Up to 17,500 ft (Khardung La)",
     mode: "Train + Road (SUV/Tempo)",
     image: "/ladakh.png",

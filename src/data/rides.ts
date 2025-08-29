@@ -90,7 +90,7 @@ export const rideData: Record<string, Ride> = {
     duration: "10 Nights / 11 Days",
     groupSize: "10–15 people",
     location: "Start & End: Kolkata (Train via Guwahati)",
-    date: "December 2025",
+    date: "26 December 2025 to 5 January 2026",
     mode: "Train + Road (Tempo Traveller/Innova)",
     image: "/arunachal.png",
     announcement: "📣 Booking details and pricing for this trip will be announced during Durga Puja 2025!",

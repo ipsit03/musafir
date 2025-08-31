@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Announcement = () => {
   const ladakhDate = new Date("2025-10-31T00:00:00");
@@ -40,8 +41,14 @@ const Announcement = () => {
         {/* Ladakh Trip */}
         <div className="mb-10">
           <p className="text-lg text-gray-700 mb-4">
-            The <span className="font-semibold">Ladakh Trip</span> is
-            officially announced! 🏔️  
+            The{" "}
+            <Link
+              to="/rides/leh-ladakh"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              Ladakh Trip
+            </Link>{" "}
+            is officially announced! 🏔️  
             <br />
             Date: <span className="font-bold">31st October 2025</span>
           </p>
@@ -69,8 +76,14 @@ const Announcement = () => {
         {/* Arunachal Trip */}
         <div>
           <p className="text-lg text-gray-700 mb-4">
-            The <span className="font-semibold">Arunachal Explorer</span> is
-            coming soon! 🌄  
+            The{" "}
+            <Link
+              to="/rides/arunachal-explorer"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              Arunachal Explorer
+            </Link>{" "}
+            is coming soon! 🌄  
             <br />
             Date: <span className="font-bold">26th December 2025</span>
           </p>

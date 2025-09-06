@@ -1,6 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import BackToTop from "../components/BackToTop";
+import { Link, useParams } from "react-router-dom";
 import {
   Calendar,
   Users,
@@ -121,15 +121,13 @@ const RideDetail = () => {
             {/* 🟦 Book Now Button */}
             {/* 🟦 Book Now Button */}
             <div className="mb-8">
-              {ride.id === "leh-ladakh" ? (
-                <a
-                  href={ride.bookingLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {ride.bookingLink ? (
+                <Link
+                  to={ride.bookingLink}
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200"
                 >
                   Book Now →
-                </a>
+                </Link>
               ) : (
                 <button
                   disabled
@@ -139,6 +137,7 @@ const RideDetail = () => {
                 </button>
               )}
             </div>
+
 
 
             {/* Itinerary */}

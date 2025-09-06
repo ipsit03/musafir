@@ -16,9 +16,17 @@ const Rides = () => {
 
   const filteredRides = ridesArray.filter((ride) => {
     const lowerQuery = searchQuery.toLowerCase();
+
+    // Match against itinerary (title or description)
+    const matchesItinerary = ride.itinerary?.some((day) =>
+      day.toLowerCase().includes(lowerQuery)
+    );
+
+
     return (
       ride.title.toLowerCase().includes(lowerQuery) ||
-      ride.location.toLowerCase().includes(lowerQuery)
+      ride.location.toLowerCase().includes(lowerQuery) ||
+      matchesItinerary
     );
   });
 
@@ -53,7 +61,7 @@ const Rides = () => {
               <div
                 key={ride.id}
                 className="group rounded-xl shadow-md border border-gray-200 overflow-hidden transition transform hover:scale-[1.02] hover:shadow-2xl bg-white opacity-0 animate-fadeInUp"
-                style={{ animationDelay: `${index * 150}ms` }} // staggered delay
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="overflow-hidden">
                   <img

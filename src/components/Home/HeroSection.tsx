@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { rideData, Ride } from '../../data/rides'; // Import from your rides.ts
 
+
 const HeroSection = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredRides, setFilteredRides] = useState<Ride[]>([]);

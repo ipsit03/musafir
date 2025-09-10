@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/rides" className="text-gray-300 hover:text-white transition">
-                  All Rides
+                  All Gateways
                 </Link>
               </li>
               <li>

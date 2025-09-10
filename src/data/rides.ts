@@ -136,6 +136,59 @@ export const rideData: Record<string, Ride> = {
       ac3: "33,999",
     },
   },
+   "nagaland-winter-expedition": {
+  id: "nagaland-winter-expedition",
+  title: "MUSAFIR x Nagaland Winter Expedition & Hornbill Festival",
+  description:
+    "Join us this December for an authentic cultural journey — witness the Hornbill Festival, trek into the stunning Dzukou Valley, and explore Nagaland’s tribal heartlands with Musafir.",
+  duration: "7 Nights / 8 Days",
+  groupSize: "5–8 People",
+  location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
+  date: "5th December to 12th December 2025",
+  mode: "Train + Road + Trek",
+  image: "/nagaland.png", // ✅ ensure this exists in /public
+  itinerary: [
+    "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
+    "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
+    "Day 2: Kohima acclimatisation & Hornbill Festival at Kisama Heritage Village – cultural shows, food, crafts",
+    "Day 3: Kohima → Viswema/Jakhama → Trek to Dzukou Valley (3–5 hrs depending on route) – sunset views",
+    "Day 4: Full day in Dzukou Valley – river hike, ridges, optional Dzukou Lake & caves, evening bonfire",
+    "Day 5: Trek back to base → Return to Kohima – explore Kohima Night Market",
+    "Day 6: Kohima → Dimapur (2.5–3 hrs) – optional zoo & craft village, evening shopping, night train",
+    "Day 7: Full-day train journey to Kolkata",
+    "Day 8: Arrive Kolkata – trip ends"
+  ],
+  inclusions: [
+    "Train tickets (Kolkata ⇄ Dimapur – Sleeper/3AC as per budget)",
+    "Dedicated group vehicle (Tempo Traveller / Sumo) for transfers",
+    "Budget homestays, guesthouses, tents (twin/multi-sharing)",
+    "Hornbill Festival entry (1 day included)",
+    "Permits & local guide for Dzukou trek",
+    "Basic first-aid kit & oxygen cylinder (emergency use)",
+    "Musafir Trip Captain for on-ground support"
+  ],
+  exclusions: [
+    "Meals (group eats at local spots – ₹300–₹500/day)",
+    "Extra Hornbill entry days beyond included ticket",
+    "Personal snacks, bottled water, drinks",
+    "Camera/video charges at tourist spots",
+    "Laundry, tips, and personal expenses",
+    "Travel insurance (optional but recommended)",
+    "Expenses due to weather, roadblocks, or unforeseen events"
+  ],
+  notes: [
+    "Hornbill Festival runs 1–10 Dec annually – Musafir will confirm exact dates",
+    "Dzukou trek requires moderate fitness (4–5 hrs climb)",
+    "Nights can get very cold in Dzukou – pack warm clothes",
+    "Train journey from Kolkata ~27–30 hrs – patience & group spirit needed!"
+  ],
+  price: {
+    sleeper: "To be announced",
+    ac3: "To be announced"
+  },
+  announcement:
+    "🌺 Musafir is heading to Nagaland this December for the Hornbill Festival! Bookings open soon — limited seats for an intimate 5–8 people group."
+},
   "meghalaya-expedition": {
     id: "meghalaya-expedition",
     title: "MUSAFIRxOFFBEAT MEGHALAYA EXPEDITION",
@@ -289,58 +342,5 @@ export const rideData: Record<string, Ride> = {
     },
     announcement:
       "❄️ Himachal Group Tour coming in 2026 — bookings and pricing will be released soon!",
-  },
-  "nagaland-winter-expedition": {
-  id: "nagaland-winter-expedition",
-  title: "MUSAFIR x Nagaland Winter Expedition & Hornbill Festival",
-  description:
-    "Join us this December for an authentic cultural journey — witness the Hornbill Festival, trek into the stunning Dzukou Valley, and explore Nagaland’s tribal heartlands with Musafir.",
-  duration: "7 Nights / 8 Days",
-  groupSize: "5–8 People",
-  location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
-  date: "December 2025 (Hornbill Festival Season)",
-  mode: "Train + Road + Trek",
-  image: "/nagaland.png", // ✅ ensure this exists in /public
-  itinerary: [
-    "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
-    "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
-    "Day 2: Kohima acclimatisation & Hornbill Festival at Kisama Heritage Village – cultural shows, food, crafts",
-    "Day 3: Kohima → Viswema/Jakhama → Trek to Dzukou Valley (3–5 hrs depending on route) – sunset views",
-    "Day 4: Full day in Dzukou Valley – river hike, ridges, optional Dzukou Lake & caves, evening bonfire",
-    "Day 5: Trek back to base → Return to Kohima – explore Kohima Night Market",
-    "Day 6: Kohima → Dimapur (2.5–3 hrs) – optional zoo & craft village, evening shopping, night train",
-    "Day 7: Full-day train journey to Kolkata",
-    "Day 8: Arrive Kolkata – trip ends"
-  ],
-  inclusions: [
-    "Train tickets (Kolkata ⇄ Dimapur – Sleeper/3AC as per budget)",
-    "Dedicated group vehicle (Tempo Traveller / Sumo) for transfers",
-    "Budget homestays, guesthouses, tents (twin/multi-sharing)",
-    "Hornbill Festival entry (1 day included)",
-    "Permits & local guide for Dzukou trek",
-    "Basic first-aid kit & oxygen cylinder (emergency use)",
-    "Musafir Trip Captain for on-ground support"
-  ],
-  exclusions: [
-    "Meals (group eats at local spots – ₹300–₹500/day)",
-    "Extra Hornbill entry days beyond included ticket",
-    "Personal snacks, bottled water, drinks",
-    "Camera/video charges at tourist spots",
-    "Laundry, tips, and personal expenses",
-    "Travel insurance (optional but recommended)",
-    "Expenses due to weather, roadblocks, or unforeseen events"
-  ],
-  notes: [
-    "Hornbill Festival runs 1–10 Dec annually – Musafir will confirm exact dates",
-    "Dzukou trek requires moderate fitness (4–5 hrs climb)",
-    "Nights can get very cold in Dzukou – pack warm clothes",
-    "Train journey from Kolkata ~27–30 hrs – patience & group spirit needed!"
-  ],
-  price: {
-    sleeper: "To be announced",
-    ac3: "To be announced"
-  },
-  announcement:
-    "🌺 Musafir is heading to Nagaland this December for the Hornbill Festival! Bookings open soon — limited seats for an intimate 5–8 rider group."
-}
+  }
 };

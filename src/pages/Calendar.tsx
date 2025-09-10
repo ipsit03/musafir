@@ -11,13 +11,14 @@ import {
   isSameMonth,
   isSameDay,
 } from "date-fns";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, CalendarDays } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Static ride dates (could be dynamically loaded later)
+// Static ride dates (later load dynamically from Supabase)
 const rideDates = [
-  { date: new Date("2025-10-31"), id: "leh-ladakh" }, // ✅ updated from 3rd → 31st Oct
-  { date: new Date("2025-12-26"), id: "arunachal-explorer" },
+  { date: new Date("2025-10-31"), id: "leh-ladakh", name: "Leh-Ladakh Expedition" },
+  { date: new Date("2025-12-05"), id: "nagaland-winter-expedition", name: "Nagaland Winter Expedition" },
+  { date: new Date("2025-12-26"), id: "arunachal-explorer", name: "Arunachal Explorer" },
 ];
 
 const Calendar = () => {
@@ -39,13 +40,20 @@ const Calendar = () => {
 
   const renderHeader = () => (
     <div className="flex items-center justify-between mb-6">
-      <button onClick={prevMonth} className="p-2 hover:bg-gray-100 rounded-lg">
+      <button
+        onClick={prevMonth}
+        className="p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition"
+      >
         <ChevronLeft className="h-6 w-6 text-gray-600" />
       </button>
-      <h2 className="text-2xl font-semibold text-gray-900">
+      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+        <CalendarDays className="h-6 w-6 text-blue-600" />
         {format(currentMonth, "MMMM yyyy")}
       </h2>
-      <button onClick={nextMonth} className="p-2 hover:bg-gray-100 rounded-lg">
+      <button
+        onClick={nextMonth}
+        className="p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition"
+      >
         <ChevronRight className="h-6 w-6 text-gray-600" />
       </button>
     </div>
@@ -63,34 +71,48 @@ const Calendar = () => {
 
       for (let i = 0; i < 7; i++) {
         const formattedDate = format(current, "d");
-        const isRideDay = rideDates.find((ride) => isSameDay(ride.date, current));
+        const ride = rideDates.find((ride) => isSameDay(ride.date, current));
         const isInactive = !isSameMonth(current, currentMonth);
+        const isToday = isSameDay(current, today);
 
-        const baseClasses =
-          "text-sm h-10 w-10 flex items-center justify-center rounded-full transition";
-        const textColor = isInactive ? "text-gray-300" : "text-gray-800";
-        const rideClasses = isRideDay
-          ? "bg-blue-600 text-white hover:bg-blue-700"
-          : textColor;
+        let classes =
+          "text-sm h-12 w-12 flex items-center justify-center rounded-full transition-all duration-300";
 
-        const dayContent = (
-          <div className={`${baseClasses} ${rideClasses}`}>
-            {formattedDate}
-          </div>
-        );
+        if (ride) {
+          classes +=
+            " bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-md hover:scale-105";
+        } else if (isToday) {
+          classes += " border-2 border-blue-500 text-blue-600 font-bold";
+        } else if (isInactive) {
+          classes += " text-gray-300";
+        } else {
+          classes += " text-gray-700 hover:bg-gray-100";
+        }
+
+        const content = <div className={classes}>{formattedDate}</div>;
 
         days.push(
-          <div key={current.toString()} className="flex justify-center items-center">
-            {isRideDay ? (
+          <div
+            key={current.toString()}
+            className="flex justify-center items-center relative group"
+          >
+            {ride ? (
               <Link
-                to={`/rides/${isRideDay.id}`}
-                className="h-10 w-10 block"
-                title={`View ${isRideDay.id.replace("-", " ")} ride details`}
+                to={`/rides/${ride.id}`}
+                className="h-12 w-12 block"
+                title={`View ${ride.name}`}
               >
-                {dayContent}
+                {content}
               </Link>
             ) : (
-              dayContent
+              content
+            )}
+
+            {/* Tooltip for rides */}
+            {ride && (
+              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                {ride.name}
+              </div>
             )}
           </div>
         );
@@ -109,20 +131,24 @@ const Calendar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Calendar</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+            📅 Upcoming Adventures
+          </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Click highlighted dates to view ride details
+            Explore our upcoming expeditions. Highlighted dates represent{" "}
+            <span className="font-semibold text-blue-600">Musafir trips</span>.
+            Click to see details.
           </p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           {renderHeader()}
 
           {/* Weekday Headings */}
-          <div className="grid grid-cols-7 text-sm font-medium text-gray-500 mb-4 text-center">
+          <div className="grid grid-cols-7 text-sm font-semibold text-gray-500 mb-4 text-center">
             <div>Sun</div>
             <div>Mon</div>
             <div>Tue</div>

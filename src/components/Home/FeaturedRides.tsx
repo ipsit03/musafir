@@ -70,6 +70,34 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+            {/* Nagaland Card */}
+            <div className="min-w-[350px] flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+              <img
+                src="/nagaland.png"
+                alt="Nagaland Expedition"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  MusafirxNagaland Winter Expedition
+                </h3>
+                <p className="text-gray-700 text-sm mb-3">
+                  Witness Hornbill Festival & tribal culture in this 9-day journey through Kohima, Kisama, Dzukou & more.
+                </p>
+                <ul className="list-disc list-inside text-gray-600 text-sm mb-4">
+                  <li>Hornbill Festival at Kisama</li>
+                  <li>Stay in traditional Naga village</li>
+                  <li>Dzukou Valley trek experience</li>
+                  <li>Explore Kohima War Cemetery</li>
+                </ul>
+                <Link
+                  to="/rides/nagaland-winter-expedition"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
+                >
+                  View Ride Details
+                </Link>
+              </div>
+            </div>
 
             {/* Meghalaya Card */}
             <div className="min-w-[350px] flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
@@ -184,34 +212,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            {/* Nagaland Card */}
-            <div className="min-w-[350px] flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
-              <img
-                src="/nagaland.png"
-                alt="Nagaland Expedition"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  MusafirxNagaland Winter Expedition
-                </h3>
-                <p className="text-gray-700 text-sm mb-3">
-                  Witness Hornbill Festival & tribal culture in this 9-day journey through Kohima, Kisama, Dzukou & more.
-                </p>
-                <ul className="list-disc list-inside text-gray-600 text-sm mb-4">
-                  <li>Hornbill Festival at Kisama</li>
-                  <li>Stay in traditional Naga village</li>
-                  <li>Dzukou Valley trek experience</li>
-                  <li>Explore Kohima War Cemetery</li>
-                </ul>
-                <Link
-                  to="/rides/nagaland-winter-expedition"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
-                >
-                  View Ride Details
-                </Link>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

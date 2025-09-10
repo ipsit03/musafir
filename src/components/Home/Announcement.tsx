@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 const Announcement = () => {
   const ladakhDate = new Date("2025-10-31T00:00:00");
+  const nagalandDate = new Date("2025-12-05T00:00:00");
   const arunachalDate = new Date("2025-12-26T00:00:00");
 
   const [ladakhTime, setLadakhTime] = useState(getTimeLeft(ladakhDate));
+  const [nagalandTime, setNagalandTime] = useState(getTimeLeft(nagalandDate));
   const [arunachalTime, setArunachalTime] = useState(getTimeLeft(arunachalDate));
 
   function getTimeLeft(targetDate: Date) {
@@ -25,6 +27,7 @@ const Announcement = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setLadakhTime(getTimeLeft(ladakhDate));
+      setNagalandTime(getTimeLeft(nagalandDate));
       setArunachalTime(getTimeLeft(arunachalDate));
     }, 1000);
 
@@ -54,22 +57,33 @@ const Announcement = () => {
           </p>
 
           <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{ladakhTime.days}</span>
-              <span className="text-sm">Days</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{ladakhTime.hours}</span>
-              <span className="text-sm">Hours</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{ladakhTime.minutes}</span>
-              <span className="text-sm">Minutes</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{ladakhTime.seconds}</span>
-              <span className="text-sm">Seconds</span>
-            </div>
+            <CountdownBox label="Days" value={ladakhTime.days} />
+            <CountdownBox label="Hours" value={ladakhTime.hours} />
+            <CountdownBox label="Minutes" value={ladakhTime.minutes} />
+            <CountdownBox label="Seconds" value={ladakhTime.seconds} />
+          </div>
+        </div>
+
+        {/* Nagaland Trip */}
+        <div className="mb-10">
+          <p className="text-lg text-gray-700 mb-4">
+            The{" "}
+            <Link
+              to="/rides/nagaland-winter-expedition"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              Nagaland Adventure
+            </Link>{" "}
+            is happening soon! 🌿🔥  
+            <br />
+            Date: <span className="font-bold">5th December 2025</span>
+          </p>
+
+          <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
+            <CountdownBox label="Days" value={nagalandTime.days} />
+            <CountdownBox label="Hours" value={nagalandTime.hours} />
+            <CountdownBox label="Minutes" value={nagalandTime.minutes} />
+            <CountdownBox label="Seconds" value={nagalandTime.seconds} />
           </div>
         </div>
 
@@ -89,27 +103,23 @@ const Announcement = () => {
           </p>
 
           <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{arunachalTime.days}</span>
-              <span className="text-sm">Days</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{arunachalTime.hours}</span>
-              <span className="text-sm">Hours</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{arunachalTime.minutes}</span>
-              <span className="text-sm">Minutes</span>
-            </div>
-            <div className="bg-white shadow rounded-lg px-4 py-2">
-              <span className="block text-3xl font-bold">{arunachalTime.seconds}</span>
-              <span className="text-sm">Seconds</span>
-            </div>
+            <CountdownBox label="Days" value={arunachalTime.days} />
+            <CountdownBox label="Hours" value={arunachalTime.hours} />
+            <CountdownBox label="Minutes" value={arunachalTime.minutes} />
+            <CountdownBox label="Seconds" value={arunachalTime.seconds} />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+// Small reusable component for countdown box
+const CountdownBox = ({ label, value }: { label: string; value: number }) => (
+  <div className="bg-white shadow rounded-lg px-4 py-2">
+    <span className="block text-3xl font-bold">{value}</span>
+    <span className="text-sm">{label}</span>
+  </div>
+);
 
 export default Announcement;

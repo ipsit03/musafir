@@ -51,12 +51,12 @@ const Announcement = () => {
             >
               Ladakh Trip
             </Link>{" "}
-            is officially announced! 🏔️  
+            is officially announced! 🏔  
             <br />
             Date: <span className="font-bold">31st October 2025</span>
           </p>
 
-          <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-gray-900 font-mono text-lg sm:text-xl">
             <CountdownBox label="Days" value={ladakhTime.days} />
             <CountdownBox label="Hours" value={ladakhTime.hours} />
             <CountdownBox label="Minutes" value={ladakhTime.minutes} />
@@ -79,7 +79,7 @@ const Announcement = () => {
             Date: <span className="font-bold">5th December 2025</span>
           </p>
 
-          <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-gray-900 font-mono text-lg sm:text-xl">
             <CountdownBox label="Days" value={nagalandTime.days} />
             <CountdownBox label="Hours" value={nagalandTime.hours} />
             <CountdownBox label="Minutes" value={nagalandTime.minutes} />
@@ -102,7 +102,7 @@ const Announcement = () => {
             Date: <span className="font-bold">26th December 2025</span>
           </p>
 
-          <div className="flex justify-center gap-6 text-gray-900 font-mono text-xl">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-gray-900 font-mono text-lg sm:text-xl">
             <CountdownBox label="Days" value={arunachalTime.days} />
             <CountdownBox label="Hours" value={arunachalTime.hours} />
             <CountdownBox label="Minutes" value={arunachalTime.minutes} />
@@ -116,9 +116,9 @@ const Announcement = () => {
 
 // Small reusable component for countdown box
 const CountdownBox = ({ label, value }: { label: string; value: number }) => (
-  <div className="bg-white shadow rounded-lg px-4 py-2">
-    <span className="block text-3xl font-bold">{value}</span>
-    <span className="text-sm">{label}</span>
+  <div className="bg-white shadow rounded-lg px-2 sm:px-4 py-2 min-w-[64px]">
+    <span className="block text-2xl sm:text-3xl font-bold">{value}</span>
+    <span className="text-xs sm:text-sm">{label}</span>
   </div>
 );
 

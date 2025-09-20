@@ -12,6 +12,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import BikeRides from "./pages/BikeRides";
 import BikeRideDetail from "./pages/BikeRideDetails";
 import BookingForm from "./pages/BookingForm";
+import About from "./pages/About"; // 👈 import the About component
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/bookingform" element={<BookingForm />} />
+          <Route path="/about" element={<About />} /> {/* 👈 new route */}
         </Route>
       </Routes>
        <BackToTop /> {/* 👈 Now visible on all pages */}

@@ -34,7 +34,7 @@ export const rideData: Record<string, Ride> = {
     date: "31st October to 15th November 2025",
     altitude: "Up to 17,500 ft (Khardung La)",
     mode: "Train + Road (SUV/Tempo)",
-    image: "/ladakh.png",
+    image: "/Ladakh.jpg",
     announcement: "📣 Bookings open from 8th August until 3rd week of September 2025!",
     bookingLink: "https://docs.google.com/forms/d/e/1FAIpQLScnioIBrPJBlWQ-AvCPqBGJjENVCjj-CG_b9YWS4GeC-3oi4A/viewform?usp=header", // 🔁 Replace this with the actual form
     itinerary: [
@@ -92,7 +92,7 @@ export const rideData: Record<string, Ride> = {
     location: "Start & End: Kolkata (Train via Guwahati)",
     date: "26 December 2025 to 5 January 2026",
     mode: "Train + Road (Tempo Traveller/Innova)",
-    image: "/arunachal.png",
+    image: "/Arunachal.jpg",
     announcement: "📣 Booking details and pricing for this trip will be announced during Durga Puja 2025!",
     itinerary: [
       "Day 1: Kolkata → Guwahati (Train Travel)",
@@ -146,7 +146,7 @@ export const rideData: Record<string, Ride> = {
   location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
   date: "5th December to 12th December 2025",
   mode: "Train + Road + Trek",
-  image: "/nagaland.png", // ✅ ensure this exists in /public
+  image: "/Nagaland.png", // ✅ ensure this exists in /public
   itinerary: [
     "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
     "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
@@ -199,7 +199,7 @@ export const rideData: Record<string, Ride> = {
     location: "Kolkata → Meghalaya → Kolkata",
     date: "Coming Winter 2025",
     mode: "Train + Road (Tempo/Sumo)",
-    image: "/meghalaya.png", // Save the image in `public/` folder
+    image: "/Meghalaya.png", // Save the image in `public/` folder
     itinerary: [
       "Day 1: Kolkata → Guwahati (Overnight Train)",
       "Day 2: Guwahati → Laitlum Canyons → Mawphlang",
@@ -249,7 +249,7 @@ export const rideData: Record<string, Ride> = {
     location: "Kolkata → Varanasi → Sarnath → Ayodhya → Prayagraj → Kolkata",
     date: "Early 2026",
     mode: "Train + Road (Private Group Vehicle)",
-    image: "/varanasi.jpeg", // Make sure to add this image in the `public/` folder
+    image: "/Prayagraj.png", // Make sure to add this image in the `public/` folder
     itinerary: [
       "Day 1: Kolkata → Varanasi (Overnight Train)",
       "Day 2: Kashi Vishwanath, Manikarnika Ghat, BHU, Ganga Aarti",
@@ -301,7 +301,7 @@ export const rideData: Record<string, Ride> = {
     location: "Kolkata → Kalka → Shimla → Manali → Kasol → Kolkata",
     date: "2026 Season (March–June / Sept–Nov)",
     mode: "Train + Road (Tempo Traveller)",
-    image: "/himachal.png", // 🔁 Save an image named `himachal.png` in your `public/` folder
+    image: "/Himachal.png", // 🔁 Save an image named `himachal.png` in your `public/` folder
     itinerary: [
       "Day 1: Kolkata → Kalka (Train via Delhi)",
       "Day 2: Onboard Train – Group bonding, games, music",

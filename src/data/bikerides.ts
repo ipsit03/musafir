@@ -35,7 +35,7 @@ export const bikeRideData: Record<string, BikeRide> = {
     location: "Burdwan → Meghalaya (Bike from Guwahati) → Burdwan",
     date: "Coming 2026",
     mode: "Train + Bike (Shared rental)",
-    image: "/meghalaya-bike.png", // Save image in /public
+    image: "/Meghalayabikeexpedition.png", // Save image in /public
     itinerary: [
       "Day 1: Burdwan → Guwahati (Train)",
       "Day 2: Bike pickup → Ride to Nongkhnum Island",

@@ -343,4 +343,4 @@ export const rideData: Record<string, Ride> = {
     announcement:
       "❄️ Himachal Group Tour coming in 2026 — bookings and pricing will be released soon!",
   }
-};ss
+};

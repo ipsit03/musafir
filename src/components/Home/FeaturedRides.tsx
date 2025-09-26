@@ -64,7 +64,7 @@ const Home: React.FC = () => {
           <div className="relative">
             <Swiper
               modules={[Autoplay, Pagination]}
-              spaceBetween={28}
+              spaceBetween={32} // 👈 slightly increased for breathing room
               slidesPerView={1}
               loop
               autoplay={{ delay: 3500, disableOnInteraction: false }}
@@ -81,20 +81,20 @@ const Home: React.FC = () => {
             >
               {rides.map((ride, idx) => (
                 <SwiperSlide key={idx} className="pb-4">
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-[360px] md:h-[400px]">
+                  <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-[420px] md:h-[460px]">
                     <img
                       src={ride.img}
                       alt={ride.title}
-                      className="w-full h-40 md:h-44 object-cover"
+                      className="w-full h-36 md:h-40 object-cover"
                     />
                     <div className="p-5 flex flex-col flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">
                         {ride.title}
                       </h3>
                       <p className="text-gray-700 text-sm mb-3 ride-desc">
                         {ride.desc}
                       </p>
-                      <div className="mt-auto flex justify-center"> {/* 👈 center align */}
+                      <div className="mt-auto flex justify-center">
                         <Link
                           to={ride.link}
                           className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition"

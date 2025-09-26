@@ -18,13 +18,13 @@ const Home: React.FC = () => {
     {
       title: "MusafirxArunachal Explorer",
       desc: "A 10-night expedition through the mountains, monasteries, and wildlife parks of North-East India.",
-      img: "/Arunachal.jpg",
+      img: "/Arunachal2.png",
       link: "/rides/arunachal-explorer",
     },
     {
       title: "MusafirxNagaland Winter Expedition",
       desc: "Witness Hornbill Festival & tribal culture in this 9-day journey through Kohima, Kisama, Dzukou & more.",
-      img: "/Nagaland.jpg",
+      img: "/Nagaland2.png",
       link: "/rides/nagaland-winter-expedition",
     },
     {
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     {
       title: "MusafirxHimachal Group Tour",
       desc: "A scenic 10-day trip through Shimla, Manali & Kasol — pine forests, snow passes & riverside cafes.",
-      img: "/Himachal.jpg",
+      img: "/Himachal2.png",
       link: "/rides/himachal-group-tour",
     },
   ];

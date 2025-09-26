@@ -92,7 +92,7 @@ export const rideData: Record<string, Ride> = {
     location: "Start & End: Kolkata (Train via Guwahati)",
     date: "26 December 2025 to 5 January 2026",
     mode: "Train + Road (Tempo Traveller/Innova)",
-    image: "/Arunachal.jpg",
+    image: "/Arunachal2.png",
     announcement: "📣 Booking details and pricing for this trip will be announced during Durga Puja 2025!",
     itinerary: [
       "Day 1: Kolkata → Guwahati (Train Travel)",
@@ -146,7 +146,7 @@ export const rideData: Record<string, Ride> = {
   location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
   date: "5th December to 12th December 2025",
   mode: "Train + Road + Trek",
-  image: "/Nagaland.png", // ✅ ensure this exists in /public
+  image: "/Nagaland2.png", // ✅ ensure this exists in /public
   itinerary: [
     "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
     "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
@@ -199,7 +199,7 @@ export const rideData: Record<string, Ride> = {
     location: "Kolkata → Meghalaya → Kolkata",
     date: "Coming Winter 2025",
     mode: "Train + Road (Tempo/Sumo)",
-    image: "/Meghalaya.png", // Save the image in `public/` folder
+    image: "/Meghalaya.jpg", // Save the image in `public/` folder
     itinerary: [
       "Day 1: Kolkata → Guwahati (Overnight Train)",
       "Day 2: Guwahati → Laitlum Canyons → Mawphlang",
@@ -301,7 +301,7 @@ export const rideData: Record<string, Ride> = {
     location: "Kolkata → Kalka → Shimla → Manali → Kasol → Kolkata",
     date: "2026 Season (March–June / Sept–Nov)",
     mode: "Train + Road (Tempo Traveller)",
-    image: "/Himachal.png", // 🔁 Save an image named `himachal.png` in your `public/` folder
+    image: "/Himachal2.png", // 🔁 Save an image named `himachal.png` in your `public/` folder
     itinerary: [
       "Day 1: Kolkata → Kalka (Train via Delhi)",
       "Day 2: Onboard Train – Group bonding, games, music",
@@ -343,4 +343,4 @@ export const rideData: Record<string, Ride> = {
     announcement:
       "❄️ Himachal Group Tour coming in 2026 — bookings and pricing will be released soon!",
   }
-};
+};ss

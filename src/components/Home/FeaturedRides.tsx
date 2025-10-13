@@ -10,12 +10,6 @@ import "swiper/css/pagination";
 const Home: React.FC = () => {
   const rides = [
     {
-      title: "MusafirxLadakh Expedition",
-      desc: "A 16-day journey through Himalayan passes, valleys, and lakes — from Sissu to Nubra, Pangong, and Manali.",
-      img: "/Ladakh.jpg",
-      link: "/rides/leh-ladakh",
-    },
-    {
       title: "MusafirxArunachal Explorer",
       desc: "A 10-night expedition through the mountains, monasteries, and wildlife parks of North-East India.",
       img: "/Arunachal2.png",
@@ -50,6 +44,12 @@ const Home: React.FC = () => {
       desc: "A scenic 10-day trip through Shimla, Manali & Kasol — pine forests, snow passes & riverside cafes.",
       img: "/Himachal2.png",
       link: "/rides/himachal-group-tour",
+    },
+    {
+      title: "MusafirxLadakh Expedition",
+      desc: "A 16-day journey through Himalayan passes, valleys, and lakes — from Sissu to Nubra, Pangong, and Manali.",
+      img: "/Ladakh.jpg",
+      link: "/rides/leh-ladakh",
     },
   ];
 

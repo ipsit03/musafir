@@ -24,63 +24,71 @@ export type Ride = {
 
 export const rideData: Record<string, Ride> = {
   "leh-ladakh": {
-    id: "leh-ladakh",
-    title: "MUSAFIRxLADAKH ADVENTURE",
-    description:
-      "A breathtaking 16-day journey from Kolkata to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung la, Chang la and more.",
-    duration: "13 to 16 days",
-    groupSize: "8–14 people",
-    location: "Kolkata → Chandigarh → Ladakh → Manali → Kolkata",
-    date: "31st October to 15th November 2025",
-    altitude: "Up to 17,500 ft (Khardung La)",
-    mode: "Train + Road (SUV/Tempo)",
-    image: "/Ladakh.jpg",
-    announcement: "📣 Bookings open from 8th August until 3rd week of September 2025!",
-    bookingLink: "https://docs.google.com/forms/d/e/1FAIpQLScnioIBrPJBlWQ-AvCPqBGJjENVCjj-CG_b9YWS4GeC-3oi4A/viewform?usp=header", // 🔁 Replace this with the actual form
-    itinerary: [
-      "Day 1: Train from Kolkata to Chandigarh (30+ hrs)",
-      "Day 2: Full day onboard train",
-      "Day 3: Scenic drive to Sissu via Mandi, Kullu, Atal Tunnel",
-      "Day 4: Long drive to Leh via Jispa, Sarchu, Tanglang La",
-      "Day 5: Rest + Sightseeing: Leh Palace, Shanti Stupa, Market",
-      "Day 6: Excursion: Hall of Fame, Magnetic Hill, Monasteries",
-      "Day 7: Drive to Nubra/Turtuk via Khardung La, Sand Dunes",
-      "Day 8: Explore Turtuk & Thang – last Indian village",
-      "Day 9: Drive to Pangong Lake via Shyok River",
-      "Day 10: Pangong to Leh via Chang La (sunrise optional)",
-      "Day 11: Drive back to Manali via Sarchu, Pang",
-      "Day 12: Manali sightseeing: Hadimba Temple, cafes",
-      "Day 13: Return to Chandigarh by road; Train to Kolkata",
-      "Day 14: Full day onboard train",
-      "Day 15: Arrival in Kolkata – trip ends with group photo",
-    ],
-    inclusions: [
-      "Train tickets (Kolkata ↔ Chandigarh)",
-      "All road transfers in tempo/SUV",
-      "Hotels, homestays, Pangong camp",
-      "Daily breakfast & dinner (Day 3–13)",
-      "Permits for Nubra, Pangong, Turtuk",
-      "Sightseeing, oxygen cylinders, first-aid",
-      "Trip leaders & local guides",
-    ],
-    exclusions: [
-      "Lunches, snacks, personal expenses",
-      "Optional activities: camel ride, rafting",
-      "Camera/video permits at restricted sites",
-      "Travel insurance",
-      "Any unforeseen emergency costs",
-    ],
-    notes: [
-      "Acclimatize for 24 hrs after reaching Leh",
-      "BSNL/Airtel postpaid work best in Ladakh",
-      "Pack warm layers, sunscreen, lip balm, ID",
-      "Inform trip captain of any medical issues",
-    ],
-    price: {
-      sleeper: "₹29,999",
-      ac3: "₹32,999",
-    },
+  id: "leh-ladakh",
+  title: "MUSAFIRxLADAKH ADVENTURE",
+  description:
+    "A breathtaking 16-day journey from Kolkata to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung La, Chang La and more.",
+  duration: "13 to 16 days",
+  groupSize: "8–14 people",
+  location: "Kolkata → Chandigarh → Ladakh → Manali → Kolkata",
+  date: "Postponed – New dates to be announced soon",
+  altitude: "Up to 17,500 ft (Khardung La)",
+  mode: "Train + Road (SUV/Tempo)",
+  image: "/Ladakh.jpg",
+
+  // 🟡 Updated announcement message
+  announcement:
+    "⚠️ Due to unforeseen conditions in Ladakh, our upcoming Musafir × Ladakh journey stands postponed.",
+
+  // 🟡 Disable booking link and mark as inactive
+  bookingLink: "",
+
+  // 🟡 Show that pricing will be announced later
+  price: {
+    sleeper: "To be announced",
+    ac3: "To be announced",
   },
+
+  itinerary: [
+    "Day 1: Train from Kolkata to Chandigarh (30+ hrs)",
+    "Day 2: Full day onboard train",
+    "Day 3: Scenic drive to Sissu via Mandi, Kullu, Atal Tunnel",
+    "Day 4: Long drive to Leh via Jispa, Sarchu, Tanglang La",
+    "Day 5: Rest + Sightseeing: Leh Palace, Shanti Stupa, Market",
+    "Day 6: Excursion: Hall of Fame, Magnetic Hill, Monasteries",
+    "Day 7: Drive to Nubra/Turtuk via Khardung La, Sand Dunes",
+    "Day 8: Explore Turtuk & Thang – last Indian village",
+    "Day 9: Drive to Pangong Lake via Shyok River",
+    "Day 10: Pangong to Leh via Chang La (sunrise optional)",
+    "Day 11: Drive back to Manali via Sarchu, Pang",
+    "Day 12: Manali sightseeing: Hadimba Temple, cafes",
+    "Day 13: Return to Chandigarh by road; Train to Kolkata",
+    "Day 14: Full day onboard train",
+    "Day 15: Arrival in Kolkata – trip ends with group photo",
+  ],
+  inclusions: [
+    "Train tickets (Kolkata ↔ Chandigarh)",
+    "All road transfers in tempo/SUV",
+    "Hotels, homestays, Pangong camp",
+    "Daily breakfast & dinner (Day 3–13)",
+    "Permits for Nubra, Pangong, Turtuk",
+    "Sightseeing, oxygen cylinders, first-aid",
+    "Trip leaders & local guides",
+  ],
+  exclusions: [
+    "Lunches, snacks, personal expenses",
+    "Optional activities: camel ride, rafting",
+    "Camera/video permits at restricted sites",
+    "Travel insurance",
+    "Any unforeseen emergency costs",
+  ],
+  notes: [
+    "Acclimatize for 24 hrs after reaching Leh",
+    "BSNL/Airtel postpaid work best in Ladakh",
+    "Pack warm layers, sunscreen, lip balm, ID",
+    "Inform trip captain of any medical issues",
+  ],
+},
 
   "arunachal-explorer": {
     id: "arunachal-explorer",

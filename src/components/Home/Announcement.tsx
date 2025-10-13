@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Announcement = () => {
-  const ladakhDate = new Date("2025-10-31T00:00:00");
   const nagalandDate = new Date("2025-12-05T00:00:00");
   const arunachalDate = new Date("2025-12-26T00:00:00");
 
-  const [ladakhTime, setLadakhTime] = useState(getTimeLeft(ladakhDate));
   const [nagalandTime, setNagalandTime] = useState(getTimeLeft(nagalandDate));
   const [arunachalTime, setArunachalTime] = useState(getTimeLeft(arunachalDate));
 
@@ -26,7 +24,6 @@ const Announcement = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setLadakhTime(getTimeLeft(ladakhDate));
       setNagalandTime(getTimeLeft(nagalandDate));
       setArunachalTime(getTimeLeft(arunachalDate));
     }, 1000);
@@ -41,7 +38,7 @@ const Announcement = () => {
           🚨 Announcements
         </h2>
 
-        {/* Ladakh Trip */}
+        {/* Ladakh Trip Postponed Notice */}
         <div className="mb-10">
           <p className="text-lg text-gray-700 mb-4">
             The{" "}
@@ -51,17 +48,20 @@ const Announcement = () => {
             >
               Ladakh Trip
             </Link>{" "}
-            is officially announced! 🏔  
-            <br />
-            Date: <span className="font-bold">31st October 2025</span>
+            has been <span className="font-bold text-red-600">postponed</span>. ❄️
           </p>
-
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-gray-900 font-mono text-lg sm:text-xl">
-            <CountdownBox label="Days" value={ladakhTime.days} />
-            <CountdownBox label="Hours" value={ladakhTime.hours} />
-            <CountdownBox label="Minutes" value={ladakhTime.minutes} />
-            <CountdownBox label="Seconds" value={ladakhTime.seconds} />
-          </div>
+          <p className="text-gray-800 italic max-w-2xl mx-auto">
+            Due to unforeseen conditions in Ladakh, our upcoming{" "}
+            <span className="font-semibold text-blue-600">
+              Musafir × Ladakh
+            </span>{" "}
+            journey stands postponed.  
+            <br />
+            <span className="font-semibold text-gray-900">
+              Safety first —
+            </span>{" "}
+            we’ll be back soon with new routes and fresh stories. 💙
+          </p>
         </div>
 
         {/* Nagaland Trip */}

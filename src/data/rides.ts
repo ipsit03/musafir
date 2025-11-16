@@ -23,73 +23,59 @@ export type Ride = {
 };
 
 export const rideData: Record<string, Ride> = {
-  "leh-ladakh": {
-  id: "leh-ladakh",
-  title: "MUSAFIRxLADAKH ADVENTURE",
-  description:
-    "A breathtaking 16-day journey from Kolkata to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung La, Chang La and more.",
-  duration: "13 to 16 days",
-  groupSize: "8–14 people",
-  location: "Kolkata → Chandigarh → Ladakh → Manali → Kolkata",
-  date: "Postponed – New dates to be announced soon",
-  altitude: "Up to 17,500 ft (Khardung La)",
-  mode: "Train + Road (SUV/Tempo)",
-  image: "/Ladakh.jpg",
-
-  // 🟡 Updated announcement message
-  announcement:
-    "⚠️ Due to unforeseen conditions in Ladakh, our upcoming Musafir × Ladakh journey stands postponed.",
-
-  // 🟡 Disable booking link and mark as inactive
-  bookingLink: "",
-
-  // 🟡 Show that pricing will be announced later
-  price: {
-    sleeper: "To be announced",
-    ac3: "To be announced",
+  "nagaland-winter-expedition": {
+    id: "nagaland-winter-expedition",
+    title: "MUSAFIR x Nagaland Winter Expedition & Hornbill Festival",
+    description:
+      "Join us this December for an authentic cultural journey — witness the Hornbill Festival, trek into the stunning Dzukou Valley, and explore Nagaland’s tribal heartlands with Musafir.",
+    duration: "7 Nights / 8 Days",
+    groupSize: "5–8 People",
+    location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
+    date: "5th December to 12th December 2025",
+    mode: "Train + Road + Trek",
+    image: "/Nagaland2.png", // ✅ ensure this exists in /public
+    itinerary: [
+      "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
+      "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
+      "Day 2: Kohima acclimatisation & Hornbill Festival at Kisama Heritage Village – cultural shows, food, crafts",
+      "Day 3: Kohima → Viswema/Jakhama → Trek to Dzukou Valley (3–5 hrs depending on route) – sunset views",
+      "Day 4: Full day in Dzukou Valley – river hike, ridges, optional Dzukou Lake & caves, evening bonfire",
+      "Day 5: Trek back to base → Return to Kohima – explore Kohima Night Market",
+      "Day 6: Kohima → Dimapur (2.5–3 hrs) – optional zoo & craft village, evening shopping, night train",
+      "Day 7: Full-day train journey to Kolkata",
+      "Day 8: Arrive Kolkata – trip ends"
+    ],
+    inclusions: [
+      "Train tickets (Kolkata ⇄ Dimapur – Sleeper/3AC as per budget)",
+      "Dedicated group vehicle (Tempo Traveller / Sumo) for transfers",
+      "Budget homestays, guesthouses, tents (twin/multi-sharing)",
+      "Hornbill Festival entry (1 day included)",
+      "Permits & local guide for Dzukou trek",
+      "Basic first-aid kit & oxygen cylinder (emergency use)",
+      "Musafir Trip Captain for on-ground support"
+    ],
+    exclusions: [
+      "Meals (group eats at local spots – ₹300–₹500/day)",
+      "Extra Hornbill entry days beyond included ticket",
+      "Personal snacks, bottled water, drinks",
+      "Camera/video charges at tourist spots",
+      "Laundry, tips, and personal expenses",
+      "Travel insurance (optional but recommended)",
+      "Expenses due to weather, roadblocks, or unforeseen events"
+    ],
+    notes: [
+      "Hornbill Festival runs 1–10 Dec annually – Musafir will confirm exact dates",
+      "Dzukou trek requires moderate fitness (4–5 hrs climb)",
+      "Nights can get very cold in Dzukou – pack warm clothes",
+      "Train journey from Kolkata ~27–30 hrs – patience & group spirit needed!"
+    ],
+    price: {
+      sleeper: "To be announced",
+      ac3: "To be announced"
+    },
+    announcement:
+      "🌺 Musafir is heading to Nagaland this December for the Hornbill Festival! Bookings open soon — limited seats for an intimate 5–8 people group."
   },
-
-  itinerary: [
-    "Day 1: Train from Kolkata to Chandigarh (30+ hrs)",
-    "Day 2: Full day onboard train",
-    "Day 3: Scenic drive to Sissu via Mandi, Kullu, Atal Tunnel",
-    "Day 4: Long drive to Leh via Jispa, Sarchu, Tanglang La",
-    "Day 5: Rest + Sightseeing: Leh Palace, Shanti Stupa, Market",
-    "Day 6: Excursion: Hall of Fame, Magnetic Hill, Monasteries",
-    "Day 7: Drive to Nubra/Turtuk via Khardung La, Sand Dunes",
-    "Day 8: Explore Turtuk & Thang – last Indian village",
-    "Day 9: Drive to Pangong Lake via Shyok River",
-    "Day 10: Pangong to Leh via Chang La (sunrise optional)",
-    "Day 11: Drive back to Manali via Sarchu, Pang",
-    "Day 12: Manali sightseeing: Hadimba Temple, cafes",
-    "Day 13: Return to Chandigarh by road; Train to Kolkata",
-    "Day 14: Full day onboard train",
-    "Day 15: Arrival in Kolkata – trip ends with group photo",
-  ],
-  inclusions: [
-    "Train tickets (Kolkata ↔ Chandigarh)",
-    "All road transfers in tempo/SUV",
-    "Hotels, homestays, Pangong camp",
-    "Daily breakfast & dinner (Day 3–13)",
-    "Permits for Nubra, Pangong, Turtuk",
-    "Sightseeing, oxygen cylinders, first-aid",
-    "Trip leaders & local guides",
-  ],
-  exclusions: [
-    "Lunches, snacks, personal expenses",
-    "Optional activities: camel ride, rafting",
-    "Camera/video permits at restricted sites",
-    "Travel insurance",
-    "Any unforeseen emergency costs",
-  ],
-  notes: [
-    "Acclimatize for 24 hrs after reaching Leh",
-    "BSNL/Airtel postpaid work best in Ladakh",
-    "Pack warm layers, sunscreen, lip balm, ID",
-    "Inform trip captain of any medical issues",
-  ],
-},
-
   "arunachal-explorer": {
     id: "arunachal-explorer",
     title: "MUSAFIRxARUNACHAL-KAZIRANGA EXPLORER",
@@ -139,64 +125,11 @@ export const rideData: Record<string, Ride> = {
       "Eat local – dhabas offer cheap & tasty meals (thukpa, momos, dal-rice)",
       "Trip budget, pricing & booking will be announced during Durga Puja 2025",
     ],
-     price: {
+    price: {
       sleeper: "₹30,999",
       ac3: "33,999",
     },
   },
-   "nagaland-winter-expedition": {
-  id: "nagaland-winter-expedition",
-  title: "MUSAFIR x Nagaland Winter Expedition & Hornbill Festival",
-  description:
-    "Join us this December for an authentic cultural journey — witness the Hornbill Festival, trek into the stunning Dzukou Valley, and explore Nagaland’s tribal heartlands with Musafir.",
-  duration: "7 Nights / 8 Days",
-  groupSize: "5–8 People",
-  location: "Kolkata → Dimapur → Kohima → Dzukou Valley → Dimapur → Kolkata",
-  date: "5th December to 12th December 2025",
-  mode: "Train + Road + Trek",
-  image: "/Nagaland2.png", // ✅ ensure this exists in /public
-  itinerary: [
-    "Day 0: Kolkata → Dimapur (Overnight train, Vivek Express or similar)",
-    "Day 1: Arrive Dimapur → Transfer to Kohima (68 km / 3 hrs) – Chümoukedima stop, evening bazaar stroll",
-    "Day 2: Kohima acclimatisation & Hornbill Festival at Kisama Heritage Village – cultural shows, food, crafts",
-    "Day 3: Kohima → Viswema/Jakhama → Trek to Dzukou Valley (3–5 hrs depending on route) – sunset views",
-    "Day 4: Full day in Dzukou Valley – river hike, ridges, optional Dzukou Lake & caves, evening bonfire",
-    "Day 5: Trek back to base → Return to Kohima – explore Kohima Night Market",
-    "Day 6: Kohima → Dimapur (2.5–3 hrs) – optional zoo & craft village, evening shopping, night train",
-    "Day 7: Full-day train journey to Kolkata",
-    "Day 8: Arrive Kolkata – trip ends"
-  ],
-  inclusions: [
-    "Train tickets (Kolkata ⇄ Dimapur – Sleeper/3AC as per budget)",
-    "Dedicated group vehicle (Tempo Traveller / Sumo) for transfers",
-    "Budget homestays, guesthouses, tents (twin/multi-sharing)",
-    "Hornbill Festival entry (1 day included)",
-    "Permits & local guide for Dzukou trek",
-    "Basic first-aid kit & oxygen cylinder (emergency use)",
-    "Musafir Trip Captain for on-ground support"
-  ],
-  exclusions: [
-    "Meals (group eats at local spots – ₹300–₹500/day)",
-    "Extra Hornbill entry days beyond included ticket",
-    "Personal snacks, bottled water, drinks",
-    "Camera/video charges at tourist spots",
-    "Laundry, tips, and personal expenses",
-    "Travel insurance (optional but recommended)",
-    "Expenses due to weather, roadblocks, or unforeseen events"
-  ],
-  notes: [
-    "Hornbill Festival runs 1–10 Dec annually – Musafir will confirm exact dates",
-    "Dzukou trek requires moderate fitness (4–5 hrs climb)",
-    "Nights can get very cold in Dzukou – pack warm clothes",
-    "Train journey from Kolkata ~27–30 hrs – patience & group spirit needed!"
-  ],
-  price: {
-    sleeper: "To be announced",
-    ac3: "To be announced"
-  },
-  announcement:
-    "🌺 Musafir is heading to Nagaland this December for the Hornbill Festival! Bookings open soon — limited seats for an intimate 5–8 people group."
-},
   "meghalaya-expedition": {
     id: "meghalaya-expedition",
     title: "MUSAFIRxOFFBEAT MEGHALAYA EXPEDITION",
@@ -240,7 +173,7 @@ export const rideData: Record<string, Ride> = {
       "Carry light rain gear, good shoes, and warm layers",
       "Trip pricing & bookings to open soon – follow us for updates!",
     ],
-     price: {
+    price: {
       sleeper: "To be announced",
       ac3: "To be announced",
     },
@@ -292,7 +225,7 @@ export const rideData: Record<string, Ride> = {
       "No alcohol/tobacco near sacred sites",
       "Train routes may vary – final confirmation during booking",
     ],
-     price: {
+    price: {
       sleeper: "To be announced",
       ac3: "To be announced",
     },
@@ -344,11 +277,77 @@ export const rideData: Record<string, Ride> = {
       "Expect early morning departures on long-drive days",
       "Carry dry snacks and stay hydrated during transit",
     ],
-     price: {
+    price: {
       sleeper: "To be announced",
       ac3: "To be announced",
     },
     announcement:
       "❄️ Himachal Group Tour coming in 2026 — bookings and pricing will be released soon!",
+  },
+  "leh-ladakh": {
+    id: "leh-ladakh",
+    title: "MUSAFIRxLADAKH ADVENTURE",
+    description:
+      "A breathtaking 16-day journey from Kolkata to the Himalayas and back — covering Chandigarh, Sissu, Leh, Nubra, Turtuk, Pangong, Manali, Khardung La, Chang La and more.",
+    duration: "13 to 16 days",
+    groupSize: "8–14 people",
+    location: "Kolkata → Chandigarh → Ladakh → Manali → Kolkata",
+    date: "Postponed – New dates to be announced soon",
+    altitude: "Up to 17,500 ft (Khardung La)",
+    mode: "Train + Road (SUV/Tempo)",
+    image: "/Ladakh.jpg",
+
+    // 🟡 Updated announcement message
+    announcement:
+      "⚠️ Due to unforeseen conditions in Ladakh, our upcoming Musafir × Ladakh journey stands postponed.",
+
+    // 🟡 Disable booking link and mark as inactive
+    bookingLink: "",
+
+    // 🟡 Show that pricing will be announced later
+    price: {
+      sleeper: "To be announced",
+      ac3: "To be announced",
+    },
+
+    itinerary: [
+      "Day 1: Train from Kolkata to Chandigarh (30+ hrs)",
+      "Day 2: Full day onboard train",
+      "Day 3: Scenic drive to Sissu via Mandi, Kullu, Atal Tunnel",
+      "Day 4: Long drive to Leh via Jispa, Sarchu, Tanglang La",
+      "Day 5: Rest + Sightseeing: Leh Palace, Shanti Stupa, Market",
+      "Day 6: Excursion: Hall of Fame, Magnetic Hill, Monasteries",
+      "Day 7: Drive to Nubra/Turtuk via Khardung La, Sand Dunes",
+      "Day 8: Explore Turtuk & Thang – last Indian village",
+      "Day 9: Drive to Pangong Lake via Shyok River",
+      "Day 10: Pangong to Leh via Chang La (sunrise optional)",
+      "Day 11: Drive back to Manali via Sarchu, Pang",
+      "Day 12: Manali sightseeing: Hadimba Temple, cafes",
+      "Day 13: Return to Chandigarh by road; Train to Kolkata",
+      "Day 14: Full day onboard train",
+      "Day 15: Arrival in Kolkata – trip ends with group photo",
+    ],
+    inclusions: [
+      "Train tickets (Kolkata ↔ Chandigarh)",
+      "All road transfers in tempo/SUV",
+      "Hotels, homestays, Pangong camp",
+      "Daily breakfast & dinner (Day 3–13)",
+      "Permits for Nubra, Pangong, Turtuk",
+      "Sightseeing, oxygen cylinders, first-aid",
+      "Trip leaders & local guides",
+    ],
+    exclusions: [
+      "Lunches, snacks, personal expenses",
+      "Optional activities: camel ride, rafting",
+      "Camera/video permits at restricted sites",
+      "Travel insurance",
+      "Any unforeseen emergency costs",
+    ],
+    notes: [
+      "Acclimatize for 24 hrs after reaching Leh",
+      "BSNL/Airtel postpaid work best in Ladakh",
+      "Pack warm layers, sunscreen, lip balm, ID",
+      "Inform trip captain of any medical issues",
+    ],
   }
 };

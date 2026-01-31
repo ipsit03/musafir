@@ -16,9 +16,7 @@ import { Link } from "react-router-dom";
 
 // Static ride dates (later load dynamically from Supabase)
 const rideDates = [
-  { date: new Date("2025-10-31"), id: "leh-ladakh", name: "Leh-Ladakh Expedition" },
-  { date: new Date("2025-12-05"), id: "nagaland-winter-expedition", name: "Nagaland Winter Expedition" },
-  { date: new Date("2025-12-26"), id: "arunachal-explorer", name: "Arunachal Explorer" },
+  { date: new Date("2026-02-21"), id: "kanaichatta-sea-beach-expedition", name: "Kanaichatta sea beach" },
 ];
 
 const Calendar = () => {

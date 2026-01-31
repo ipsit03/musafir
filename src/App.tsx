@@ -13,6 +13,10 @@ import BikeRides from "./pages/BikeRides";
 import BikeRideDetail from "./pages/BikeRideDetails";
 import BookingForm from "./pages/BookingForm";
 import About from "./pages/About"; // 👈 import the About component
+import BookingPage from "./pages/BookingPage";
+import AdminDashboard from "./pages/AdminDashboard";
+
+
 
 function App() {
   return (
@@ -30,6 +34,9 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/bookingform" element={<BookingForm />} />
           <Route path="/about" element={<About />} /> {/* 👈 new route */}
+          <Route path="/book/:id" element={<BookingPage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+
         </Route>
       </Routes>
        <BackToTop /> {/* 👈 Now visible on all pages */}

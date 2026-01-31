@@ -10,40 +10,16 @@ import "swiper/css/pagination";
 const Home: React.FC = () => {
   const rides = [
     {
-      title: "MusafirxArunachal Explorer",
-      desc: "A 10-night expedition through the mountains, monasteries, and wildlife parks of North-East India.",
-      img: "/Arunachal2.png",
-      link: "/rides/arunachal-explorer",
-    },
-    {
-      title: "MusafirxNagaland Winter Expedition",
-      desc: "Witness Hornbill Festival & tribal culture in this 9-day journey through Kohima, Kisama, Dzukou & more.",
-      img: "/Nagaland2.png",
-      link: "/rides/nagaland-winter-expedition",
-    },
-    {
-      title: "MusafirxMeghalaya Expedition",
-      desc: "A 7-day adventure through sacred groves, root bridges, and the crystal waters of Dawki and Nongriat.",
-      img: "/Meghalaya.jpg",
-      link: "/rides/meghalaya-expedition",
-    },
+  title: "Kanaichatta Sea Beach Expedition",
+  desc: "Escape to Bengal’s untouched coastline with Sonajhuri forests, mangroves, red crabs, and serene beachside camping—perfect for nature lovers and slow travelers.",
+  img: "/kanaichatta.png",
+  link: "/rides/kanaichatta-sea-beach-expedition",
+},
     {
       title: "The Sacred Circle: Varanasi, Ayodhya & Prayagraj",
       desc: "Explore Kashi, Ayodhya, and Prayagraj in 6 days—temples, aartis, heritage, food trails, and stories.",
       img: "/Prayagraj.png",
       link: "/rides/varanasi-sacred-circle",
-    },
-    {
-      title: "MusafirxMeghalaya Bike Expedition",
-      desc: "Ride to rivers, waterfalls, remote camps & villages across Meghalaya — bike through clouds & pine forests.",
-      img: "/Meghalayabikeexpedition.png",
-      link: "/rides/meghalaya-bike-expedition",
-    },
-    {
-      title: "MusafirxHimachal Group Tour",
-      desc: "A scenic 10-day trip through Shimla, Manali & Kasol — pine forests, snow passes & riverside cafes.",
-      img: "/Himachal2.png",
-      link: "/rides/himachal-group-tour",
     },
     {
       title: "MusafirxLadakh Expedition",

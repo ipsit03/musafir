@@ -134,10 +134,56 @@ const BookingPage = () => {
     doc.save(`Musafir-${ride.id}-Booking.pdf`);
   };
 };
+const sendToWhatsApp = () => {
+  const message = `
+📌 *New Musafir Booking*
+
+🧳 Trip: ${ride.title}
+👤 Name: ${formData.fullName}
+📧 Email: ${formData.email}
+📞 Phone: ${formData.phone}
+📅 Date: ${formData.travelDate}
+👥 Travelers: ${formData.numberOfTravelers}
+💺 Pricing: ${formData.selectedPricing}
+💰 Total: ₹${calculateTotal()}
+📍 Pickup: ${formData.pickupCity}
+📝 Requests: ${formData.specialRequests || "None"}
+  `;
+
+  const whatsappURL = `https://wa.me/918900002341?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, "_blank");
+};
+const sendToGoogleSheet = async () => {
+  const data = {
+    trip: ride.title,
+    name: formData.fullName,
+    email: formData.email,
+    phone: formData.phone,
+    date: formData.travelDate,
+    travelers: formData.numberOfTravelers,
+    pricing: formData.selectedPricing,
+    total: calculateTotal(),
+    pickup: formData.pickupCity,
+    requests: formData.specialRequests,
+  };
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbx1h-knwjz4sBlH7AF2oFQiArQw83XmENC0j1ORdR6lOwF7Lfp_VRLhvh5g6UrJ_BeDKA/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  } catch (error) {
+    console.error("Error sending booking:", error);
+  }
+};
+
+
+
 
 
   const handleSubmit = () => {
   generatePDF(); // 👈 Added
+  sendToGoogleSheet();
   setShowSuccess(true);
 };
 

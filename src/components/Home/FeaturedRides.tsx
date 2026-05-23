@@ -10,11 +10,11 @@ import "swiper/css/pagination";
 const Home: React.FC = () => {
   const rides = [
     {
-  title: "Kanaichatta Sea Beach Expedition",
-  desc: "Escape to Bengal’s untouched coastline with Sonajhuri forests, mangroves, red crabs, and serene beachside camping—perfect for nature lovers and slow travelers.",
-  img: "/kanaichatta.png",
-  link: "/rides/kanaichatta-sea-beach-expedition",
-},
+      title: "DOOARS ON TWO WHEELS",
+      desc: "Ride through the monsoon forests of North Bengal with riverside camping, Buxa Tiger Reserve trails, tea gardens, and misty Himalayan foothills — crafted for riders who believe the road itself is the destination.",
+      img: "/Dooarsbik.png",
+      link: "/bikerides/dooars-on-two-wheels",
+    },
     {
       title: "The Sacred Circle: Varanasi, Ayodhya & Prayagraj",
       desc: "Explore Kashi, Ayodhya, and Prayagraj in 6 days—temples, aartis, heritage, food trails, and stories.",

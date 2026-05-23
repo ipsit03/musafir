@@ -64,7 +64,7 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-            📬 Contact Us
+            Contact Us
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We’d love to hear from you. Reach out with your queries, ideas, or travel dreams.

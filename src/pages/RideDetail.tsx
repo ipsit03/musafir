@@ -1,6 +1,8 @@
 import React from "react";
 import BackToTop from "../components/BackToTop";
 import { Link, useParams } from "react-router-dom";
+import ReviewsSection from "../components/Reviews/ReviewsSection";
+
 import {
   Calendar,
   Users,
@@ -14,16 +16,20 @@ import {
   Megaphone,
   IndianRupee,
 } from "lucide-react";
+
 import { rideData } from "../data/rides";
 
 const RideDetail = () => {
   const { id } = useParams();
+
   const ride = rideData[id || ""];
 
   if (!ride) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-600 text-lg">Ride not found.</p>
+        <p className="text-gray-600 text-lg">
+          Ride not found.
+        </p>
       </div>
     );
   }
@@ -32,6 +38,7 @@ const RideDetail = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          {/* Hero Image */}
           <img
             src={ride.image}
             alt={ride.title}
@@ -39,10 +46,14 @@ const RideDetail = () => {
           />
 
           <div className="p-8">
+            {/* Title */}
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               {ride.title}
             </h1>
-            <p className="text-gray-600 mb-6">{ride.description}</p>
+
+            <p className="text-gray-600 mb-6">
+              {ride.description}
+            </p>
 
             {/* Trip Summary */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-sm">
@@ -52,24 +63,29 @@ const RideDetail = () => {
                   {ride.date}
                 </div>
               )}
+
               <div className="flex items-center">
                 <Clock className="h-5 w-5 text-blue-600 mr-2" />
                 Duration: {ride.duration}
               </div>
+
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-blue-600 mr-2" />
                 {ride.location}
               </div>
+
               {ride.altitude && (
                 <div className="flex items-center">
                   <Mountain className="h-5 w-5 text-blue-600 mr-2" />
                   Altitude: {ride.altitude}
                 </div>
               )}
+
               <div className="flex items-center">
                 <Bus className="h-5 w-5 text-blue-600 mr-2" />
                 Mode: {ride.mode}
               </div>
+
               {ride.groupSize && (
                 <div className="flex items-center">
                   <Users className="h-5 w-5 text-blue-600 mr-2" />
@@ -78,66 +94,74 @@ const RideDetail = () => {
               )}
             </div>
 
-            {/* 💰 Price Section */}
+            {/* Price Section */}
             {ride.price && (
               <div className="mb-8">
                 <h2 className="text-xl font-semibold text-green-700 flex items-center mb-2">
-                  <IndianRupee className="h-5 w-5 mr-2" /> Price Details
+                  <IndianRupee className="h-5 w-5 mr-2" />
+                  Price Details
                 </h2>
 
                 {Object.values(ride.price).every(
-                  (value) => value === "To be announced"
+                  (value) =>
+                    value === "To be announced" ||
+                    value === "Batch Completed"
                 ) ? (
                   <p className="text-gray-700 text-sm italic">
-                    To be announced
+                    Batch Completed
                   </p>
                 ) : (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
-                    {Object.entries(ride.price).map(([type, value]) => (
-                      <div
-                        key={type}
-                        className="bg-green-50 p-4 rounded-lg shadow-sm"
-                      >
-                        <p className="font-medium capitalize">{type}</p>
-                        <p className="text-lg font-bold text-green-800">
-                          {value}
-                        </p>
-                      </div>
-                    ))}
+                    {Object.entries(ride.price).map(
+                      ([type, value]) => (
+                        <div
+                          key={type}
+                          className="bg-green-50 p-4 rounded-lg shadow-sm"
+                        >
+                          <p className="font-medium capitalize">
+                            {type}
+                          </p>
+
+                          <p className="text-lg font-bold text-green-800">
+                            {value}
+                          </p>
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
               </div>
             )}
 
-            {/* 📣 Booking Announcement */}
+            {/* Booking Announcement */}
             {ride.announcement && (
               <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg mb-6 flex items-start">
                 <Megaphone className="h-5 w-5 mr-2 mt-1 text-yellow-600" />
+
                 <span className="text-sm font-medium">
                   {ride.announcement}
                 </span>
               </div>
             )}
 
-            {/* 🟦 Book Now Button */}
+            {/* Book Button */}
             <div className="mb-8">
-  {ride.bookingEnabled ? (
-    <Link
-      to={`/book/${ride.id}`}
-      className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200"
-    >
-      Book Now →
-    </Link>
-  ) : (
-    <button
-      disabled
-      className="inline-block bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg shadow cursor-not-allowed opacity-70"
-    >
-      Booking Unavailable
-    </button>
-  )}
-</div>
-
+              {ride.bookingEnabled ? (
+                <Link
+                  to={`/book/${ride.id}`}
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200"
+                >
+                  Book Now →
+                </Link>
+              ) : (
+                <button
+                  disabled
+                  className="inline-block bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg shadow cursor-not-allowed opacity-70"
+                >
+                  Booking Closed
+                </button>
+              )}
+            </div>
 
             {/* Itinerary */}
             {ride.itinerary && (
@@ -145,10 +169,13 @@ const RideDetail = () => {
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                   Detailed Itinerary
                 </h2>
+
                 <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm mb-8">
-                  {ride.itinerary.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
+                  {ride.itinerary.map(
+                    (point, index) => (
+                      <li key={index}>{point}</li>
+                    )
+                  )}
                 </ul>
               </>
             )}
@@ -157,12 +184,16 @@ const RideDetail = () => {
             {ride.inclusions && (
               <>
                 <h2 className="text-xl font-semibold text-green-700 flex items-center mb-2">
-                  <CheckCircle className="h-5 w-5 mr-2" /> Inclusions
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  Inclusions
                 </h2>
+
                 <ul className="list-disc list-inside text-gray-700 text-sm mb-6">
-                  {ride.inclusions.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                  {ride.inclusions.map(
+                    (item, index) => (
+                      <li key={index}>{item}</li>
+                    )
+                  )}
                 </ul>
               </>
             )}
@@ -171,12 +202,16 @@ const RideDetail = () => {
             {ride.exclusions && (
               <>
                 <h2 className="text-xl font-semibold text-red-600 flex items-center mb-2">
-                  <XCircle className="h-5 w-5 mr-2" /> Exclusions
+                  <XCircle className="h-5 w-5 mr-2" />
+                  Exclusions
                 </h2>
+
                 <ul className="list-disc list-inside text-gray-700 text-sm mb-6">
-                  {ride.exclusions.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                  {ride.exclusions.map(
+                    (item, index) => (
+                      <li key={index}>{item}</li>
+                    )
+                  )}
                 </ul>
               </>
             )}
@@ -185,18 +220,27 @@ const RideDetail = () => {
             {ride.notes && (
               <>
                 <h2 className="text-xl font-semibold text-blue-700 flex items-center mb-2">
-                  <Info className="h-5 w-5 mr-2" /> Essential Notes
+                  <Info className="h-5 w-5 mr-2" />
+                  Essential Notes
                 </h2>
-                <ul className="list-disc list-inside text-gray-700 text-sm">
+
+                <ul className="list-disc list-inside text-gray-700 text-sm mb-10">
                   {ride.notes.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
               </>
             )}
+
+            {/* Reviews Only For Completed Trips */}
+            {/* Reviews Section */}
+{ride.reviewsEnabled && (
+  <ReviewsSection rideId={ride.id} />
+)}
           </div>
         </div>
       </div>
+
       <BackToTop />
     </div>
   );

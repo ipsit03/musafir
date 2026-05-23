@@ -1,11 +1,12 @@
 // src/pages/BookingForm.tsx
 import React, { useState } from "react";
+import { supabase } from "../supabase";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    mobile: "",
+    phone: "",
     dob: "",
     tripDate: "",
     gender: "",
@@ -27,11 +28,68 @@ const BookingForm = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    alert("✅ Form submitted! (Connect backend/Google Form here)");
-  };
+  const handleSubmit = async (
+  e: React.FormEvent
+) => {
+  e.preventDefault();
+
+  const bookingData = {
+  trip: formData.tripDate,
+
+  full_name: formData.fullName,
+
+  email: formData.email,
+
+  phone: formData.phone,
+
+  dob: formData.dob,
+
+  gender: formData.gender,
+
+  address: formData.address,
+
+  aadhar_number:
+    formData.aadharNumber,
+
+  travel_date:
+    formData.tripDate,
+
+  special_requests:
+    formData.address,
+
+  total: 0,
+};
+
+  const { error } = await supabase
+    .from("bookings")
+    .insert([bookingData]);
+
+  if (error) {
+    console.log(error);
+
+    alert(error.message);
+
+    return;
+  }
+
+  alert(
+    "✅ Booking submitted successfully!"
+  );
+
+  setFormData({
+    fullName: "",
+    email: "",
+    phone: "",
+    dob: "",
+    tripDate: "",
+    gender: "",
+    address: "",
+    aadharNumber: "",
+    aadharFile: null,
+    voterFile: null,
+    medicalFile: null,
+  });
+};
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
@@ -82,7 +140,7 @@ const BookingForm = () => {
               required
               placeholder="10-digit number"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              value={formData.mobile}
+              value={formData.phone}
               onChange={handleChange}
             />
           </div>

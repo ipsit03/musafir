@@ -15,6 +15,7 @@ import BookingForm from "./pages/BookingForm";
 import About from "./pages/About"; // 👈 import the About component
 import BookingPage from "./pages/BookingPage";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminReviews from "./pages/AdminReviews";
 
 
 
@@ -26,20 +27,21 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="rides" element={<Rides />} />
-           <Route path="/bikerides" element={<BikeRides />} />
+          <Route path="/bikerides" element={<BikeRides />} />
           <Route path="rides/:id" element={<RideDetail />} />
-          <Route path="/bikerides/:id" element={<BikeRideDetail />} /> 
+          <Route path="/bikerides/:id" element={<BikeRideDetail />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/bookingform" element={<BookingForm />} />
           <Route path="/about" element={<About />} /> {/* 👈 new route */}
           <Route path="/book/:id" element={<BookingPage />} />
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin"element={<AdminDashboard />}/>
+          <Route path="/admin/reviews" element={<AdminReviews />} />
 
         </Route>
       </Routes>
-       <BackToTop /> {/* 👈 Now visible on all pages */}
+      <BackToTop /> {/* 👈 Now visible on all pages */}
     </Router>
   );
 }

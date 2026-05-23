@@ -1,4 +1,5 @@
 // src/data/bikerides.ts
+
 export type BikeRide = {
   id: string;
   title: string;
@@ -17,66 +18,121 @@ export type BikeRide = {
   notes?: string[];
   announcement?: string;
   bookingLink?: string;
-  price: {
-    sleeper: string;
-    ac3: string;
-  };
+
+  bookingEnabled?: boolean;
+  reviewsEnabled?: boolean;
+
+ price: {
+  [key: string]: string;
+};
 };
 
 // Only include rides where mode has "Bike"
-export const bikeRideData: Record<string, BikeRide> = {
-  "meghalaya-bike-expedition": {
-    id: "meghalaya-bike-expedition",
-    title: "MUSAFIRxMEGHALAYA BIKE EXPEDITION 2026",
-    description:
-      "An adventurous 9-night bike ride through Meghalaya's rivers, waterfalls, and hidden villages – for true explorers.",
-    duration: "9 Nights / 10 Days",
-    groupSize: "10–12 people",
-    location: "Burdwan → Meghalaya (Bike from Guwahati) → Burdwan",
-    date: "Coming 2026",
-    mode: "Train + Bike (Shared rental)",
-    image: "/Meghalayabikeexpedition.png", // Save image in /public
-    itinerary: [
-      "Day 1: Burdwan → Guwahati (Train)",
-      "Day 2: Bike pickup → Ride to Nongkhnum Island",
-      "Day 3: Nongkhnum → Krangsuri Falls → Shnongpdeng (Camping)",
-      "Day 4: Ride to Pynursla via scenic hill roads",
-      "Day 5: Ride to Tyrna → Trek to Nongriat village",
-      "Day 6: Trek up → Ride to Sohra (Cherrapunji sightseeing)",
-      "Day 7: Sohra → Shillong via Mawkdok & Elephant Falls",
-      "Day 8: Shillong → Umiam Lake → Guwahati (bike drop) → Train",
-      "Day 9: Arrival in Burdwan – trip ends",
-    ],
-    inclusions: [
-      "Train fare (Burdwan ↔ Guwahati) – Sleeper/3AC",
-      "Bike rental (2 people per bike, fuel included for itinerary)",
-      "Basic homestays/guesthouses/camps (twin/triple sharing)",
-      "All entry fees to waterfalls & key attractions",
-      "Inner line permits (if needed)",
-      "Experienced road captain / trip leader",
-      "Basic first aid support",
-    ],
-    exclusions: [
-      "Meals (average ₹250–300/day – flexible)",
-      "Fuel for detours outside itinerary",
-      "Personal expenses (shopping, boating, zipline, etc.)",
-      "Refundable bike security deposit",
-      "Repairs due to rider damage",
-      "Travel insurance",
-    ],
-    notes: [
-      "Bikes are picked up & dropped in Guwahati – no overnight stay there",
-      "Expect basic stays in remote areas (Nongriat, Nongkhnum)",
-      "Be prepared for long bike rides & jungle treks",
-      "Wear helmets, ride safely – weather can change quickly",
-    ],
-    price: {
-      sleeper: "To be announced",
-      ac3: "To be announced",
-    },
-    announcement:
-      "🏍️ The Meghalaya Bike Expedition is coming in 2026! Watch this space for bookings soon.",
-  },
+export const bikeRideData: Record<
+  string,
+  BikeRide
+> = {
+  "dooars-on-two-wheels": {
+    id: "dooars-on-two-wheels",
 
-  // 🔥 Add more future bike rides here as needed
+    title:
+      "DOOARS ON TWO WHEELS — A MONSOON BIKE EXPEDITION",
+
+    description:
+      "A cinematic motorcycle expedition through the monsoon forests of North Bengal — riding across elephant corridors, riverside trails, tea gardens, and Himalayan foothills with camping, trekking, and forest immersion.",
+
+    duration: "3 Days / 2 Nights",
+
+    groupSize: "Small Curated Group (8–12 Riders)",
+
+    location:
+      "Burdwan/Kolkata → NJP → Buxa → Jayanti → Samsing → NJP → Burdwan/Kolkata",
+
+    date: "June 2026",
+
+    altitude:
+      "Approx. 3,000 ft (Samsing)",
+
+    mode:
+      "Train + Motorcycle Expedition",
+
+    image:
+      "/Dooarsbik.png",
+
+    itinerary: [
+      "Day 0: Overnight train departure from Burdwan/Kolkata to NJP",
+
+      "Day 1: Arrival at NJP → Bike pickup & briefing → Ride via Sevoke & Chalsa → Madarihat → Rajabhatkhawa → Buxa Tiger Reserve → Lunch & stay at Buxa → Evening trek to historic Buxa Fort",
+
+      "Day 2: Early morning forest exploration → Chota Mahakaal Temple → Breakfast & checkout → Ride to Jayanti riverside → Wildlife & forest experience → Long scenic ride to Rocky Island, Samsing via tea gardens & river valleys → Sunset meadow hike → Riverside camping & bonfire",
+
+      "Day 3: Sunrise at Murti River → Breakfast → Scenic descent ride back to NJP → Bike return → Evening train to Burdwan/Kolkata",
+
+      "Day 4: Arrival back home with expedition memories",
+    ],
+
+    inclusions: [
+      "Accommodation at Buxa stay & riverside tent camping at Rocky Island",
+
+      "All meals from Day 1 lunch to Day 3 breakfast",
+
+      "Certified forest guide for Buxa Fort trek",
+
+      "Forest permits & documentation",
+
+      "Jayanti range entry permissions",
+
+      "Bonfire evening at Rocky Island (weather permitting)",
+
+      "First-aid & on-ground expedition support",
+
+      "Dedicated Musafir trip captain throughout the expedition",
+    ],
+
+    exclusions: [
+      "Train tickets",
+
+      "Motorcycle rental charges",
+
+      "Fuel expenses",
+
+      "Personal riding gear except helmets",
+
+      "Meals during train journeys",
+
+      "Personal expenses & shopping",
+
+      "Tips & gratuities",
+
+      "Damage charges for rental motorcycles",
+
+      "Travel insurance",
+
+      "Anything not explicitly mentioned in inclusions",
+    ],
+
+    notes: [
+      "Designed for riders comfortable with Indian highways & monsoon riding",
+
+      "June conditions include wet roads, slippery terrain, and occasional heavy rain",
+
+      "Leeches may be present during forest treks",
+
+      "Carry rain gear, waterproof gloves, and quick-dry clothing",
+
+      "Riders must carry valid driving license & ID proof",
+
+      "Slow travel & eco-sensitive riding ethos will be followed throughout the expedition",
+
+      "Pillion riders are allowed on prior request",
+    ],
+
+    price: {standard:"5499"},
+
+    bookingEnabled: true,
+    reviewsEnabled: false,
+
+    announcement:
+      "🌧️ Musafir Travel Co. presents a monsoon motorcycle expedition through the wild Dooars in June 2026. Limited rider slots. Booking details coming soon.",
+  },
 };

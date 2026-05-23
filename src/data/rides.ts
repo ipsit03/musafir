@@ -17,6 +17,7 @@ export type Ride = {
   announcement?: string;
   bookingLink?: string;
   bookingEnabled?: boolean;
+  reviewsEnabled?: boolean;
   price: {
   [key: string]: string;
 };
@@ -24,54 +25,86 @@ export type Ride = {
 
 export const rideData: Record<string, Ride> = {
   "kanaichatta-sea-beach-expedition": {
-  id: "kanaichatta-sea-beach-expedition",
-  title: "Kanaichatta Sea Beach Expedition",
-  description:
-    "Escape the urban chaos with a curated coastal journey into East Midnapore’s untouched beaches, Sonajhuri forests, and mangrove ecosystems. Perfect for nature lovers, photographers, and slow travelers seeking authentic coastal Bengal.",
-  duration: "2 Nights / 3 Days",
-  groupSize: "Flexible (Self-drive trip)",
-  location: "Kolkata / Burdwan → Medinipur → Kanthi → Kanaichatta",
-  date: "October to March (Best Season)",
-  mode: "Self-Drive (Sedan or SUV recommended)",
-  image: "/kanaichatta.png", // ensure this exists in /public
-  itinerary: [
-    "Day 1: Early morning departure from Kolkata/Burdwan → En route stop at Dariapur Lighthouse & Kapalkundala Temple → Arrival at Nature Stay Beach Camp → Sunset Trail walk → Bonfire evening",
-    "Day 2: Early morning birdwatching → Beach sports & recreation → Guided mangrove exploration → Bengali coastal seafood lunch → Visit Bankiput fishing village → Bonfire with folk storytelling & music",
-    "Day 3: Morning tide pool exploration & beach photography → Breakfast → Optional stops at Hijli Lighthouse & Fort, Tarapur Barrage, or Kanthi Market → Return journey"
-  ],
-  inclusions: [
-    "2 nights accommodation (Tent or Room stay)",
-    "All meals from Day 1 dinner to Day 3 breakfast",
-    "Evening tea & snacks",
-    "Bonfire evenings with light refreshments",
-    "Guided forest walks & beach access",
-    "Village visit & mangrove exploration support",
-    "Use of beach recreational equipment"
-  ],
-  exclusions: [
-    "Fuel and personal vehicle expenses",
-    "Entry fees for lighthouse & historical sites",
-    "Personal guide tips",
-    "Travel insurance",
-    "Alcohol or extra beverages",
-    "Personal expenses"
-  ],
-  notes: [
-    "Best visited between October and March for ideal weather",
-    "Birdwatching opportunities include Sandpipers, Plovers, and Herons",
-    "Strict zero-waste policy followed — respect local ecology",
-    "Carry insect repellent, sunscreen, binoculars, and comfortable clothing",
-    "Children are welcome but must be supervised near water",
-    "Self-drive route is beginner-friendly with well-maintained roads"
-  ],
-  price: {
-  tent: "₹3,200 per person",
-  room: "₹3,600 per person"
-},
-bookingEnabled: true,
-  announcement:
-    "🌊 Experience Bengal’s untouched coastline with Musafir. Limited slots available to preserve the pristine environment — book early!"
-},
+    id: "kanaichatta-sea-beach-expedition",
+
+    title: "Kanaichatta Sea Beach Expedition",
+
+    description:
+      "Escape the urban chaos with a curated coastal journey into East Midnapore’s untouched beaches, Sonajhuri forests, and mangrove ecosystems. Perfect for nature lovers, photographers, and slow travelers seeking authentic coastal Bengal.",
+
+    duration: "2 Nights / 3 Days",
+
+    groupSize: "Flexible (Self-drive trip)",
+
+    location:
+      "Kolkata / Burdwan → Medinipur → Kanthi → Kanaichatta",
+
+    date:
+      "Previous Batch Completed Successfully",
+
+    mode:
+      "Self-Drive (Sedan or SUV recommended)",
+
+    image: "/kanaichatta.png",
+
+    itinerary: [
+      "Day 1: Early morning departure from Kolkata/Burdwan → En route stop at Dariapur Lighthouse & Kapalkundala Temple → Arrival at Nature Stay Beach Camp → Sunset Trail walk → Bonfire evening",
+
+      "Day 2: Early morning birdwatching → Beach sports & recreation → Guided mangrove exploration → Bengali coastal seafood lunch → Visit Bankiput fishing village → Bonfire with folk storytelling & music",
+
+      "Day 3: Morning tide pool exploration & beach photography → Breakfast → Optional stops at Hijli Lighthouse & Fort, Tarapur Barrage, or Kanthi Market → Return journey",
+    ],
+
+    inclusions: [
+      "2 nights accommodation (Tent or Room stay)",
+
+      "All meals from Day 1 dinner to Day 3 breakfast",
+
+      "Evening tea & snacks",
+
+      "Bonfire evenings with light refreshments",
+
+      "Guided forest walks & beach access",
+
+      "Village visit & mangrove exploration support",
+
+      "Use of beach recreational equipment",
+    ],
+
+    exclusions: [
+      "Fuel and personal vehicle expenses",
+
+      "Entry fees for lighthouse & historical sites",
+
+      "Personal guide tips",
+
+      "Travel insurance",
+
+      "Alcohol or extra beverages",
+
+      "Personal expenses",
+    ],
+
+    notes: [
+      "Best visited between October and March for ideal weather",
+
+      "Birdwatching opportunities include Sandpipers, Plovers, and Herons",
+
+      "Strict zero-waste policy followed — respect local ecology",
+
+      "Carry insect repellent, sunscreen, binoculars, and comfortable clothing",
+
+      "Children are welcome but must be supervised near water",
+
+      "Self-drive route is beginner-friendly with well-maintained roads",
+    ],
+
+    bookingEnabled: false,
+    reviewsEnabled: true,
+
+    announcement:
+      "🌊 This expedition batch has been completed successfully. Future editions are being planned. Reviews and rider experiences remain open for community feedback.",
+  },
   "varanasi-sacred-circle": {
     id: "varanasi-sacred-circle",
     title: "THE SACRED CIRCLE: VARANASI, AYODHYA & PRAYAGRAJ",
@@ -122,6 +155,7 @@ bookingEnabled: true,
       ac3: "To be announced",
     },
     bookingEnabled: false,
+    reviewsEnabled: false,
     announcement:
       "🚩 The Sacred Circle ride (Varanasi–Ayodhya–Prayagraj) will commence in early 2026. Booking info coming soon!",
   },
@@ -150,6 +184,7 @@ bookingEnabled: true,
       ac3: "To be announced",
     },
     bookingEnabled: false,
+    reviewsEnabled: false,
 
     itinerary: [
       "Day 1: Train from Kolkata to Chandigarh (30+ hrs)",

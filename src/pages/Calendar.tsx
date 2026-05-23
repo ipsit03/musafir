@@ -15,9 +15,11 @@ import { ChevronLeft, ChevronRight, CalendarDays } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Static ride dates (later load dynamically from Supabase)
-const rideDates = [
-  { date: new Date("2026-02-21"), id: "kanaichatta-sea-beach-expedition", name: "Kanaichatta sea beach" },
-];
+const rideDates: {
+  date: Date;
+  id: string;
+  name: string;
+}[] = [];
 
 const Calendar = () => {
   const today = new Date();
@@ -133,7 +135,7 @@ const Calendar = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-            📅 Upcoming Adventures
+            Upcoming Adventures
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Explore our upcoming expeditions. Highlighted dates represent{" "}

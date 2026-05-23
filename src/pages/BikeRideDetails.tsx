@@ -15,6 +15,7 @@ import {
   IndianRupee,
 } from "lucide-react";
 import { bikeRideData } from "../data/bikerides";
+import { Link } from "react-router-dom";
 
 const BikeRideDetail = () => {
   const { id } = useParams();
@@ -77,34 +78,65 @@ const BikeRideDetail = () => {
             </div>
 
             {/* 💰 Price Section */}
+
             {ride.price && (
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-green-700 flex items-center mb-2">
-                  <IndianRupee className="h-5 w-5 mr-2" /> Price Details
+
+                <h2 className="text-xl font-semibold text-green-700 flex items-center mb-3">
+                  <IndianRupee className="h-5 w-5 mr-2" />
+                  Price Details
                 </h2>
 
-                {ride.price.sleeper === "To be announced" &&
-                ride.price.ac3 === "To be announced" ? (
-                  <p className="text-gray-700 text-sm italic">To be announced</p>
+                {Object.values(ride.price).every(
+                  (value) =>
+                    value === "To be announced"
+                ) ? (
+                  <p className="text-gray-700 text-sm italic">
+                    To be announced
+                  </p>
+                ) : Object.keys(ride.price)
+                  .length === 1 ? (
+
+                  /* SINGLE PRICE */
+
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-100 border border-green-200 rounded-2xl p-6 shadow-sm">
+
+                    <p className="text-3xl font-bold text-green-900">
+                      {
+                        Object.values(
+                          ride.price
+                        )[0]
+                      }
+                    </p>
+
+                  </div>
                 ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
-                    <div className="bg-green-50 p-4 rounded-lg shadow-sm">
-                      <p className="font-medium">Sleeper Class</p>
-                      <p className="text-lg font-bold text-green-800">
-                        {ride.price.sleeper}
-                      </p>
-                    </div>
-                    <div className="bg-blue-50 p-4 rounded-lg shadow-sm">
-                      <p className="font-medium">3AC Class</p>
-                      <p className="text-lg font-bold text-blue-800">
-                        {ride.price.ac3}
-                      </p>
-                    </div>
+
+                  /* MULTIPLE PRICES */
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    {Object.entries(
+                      ride.price
+                    ).map(([type, value]) => (
+                      <div
+                        key={type}
+                        className="bg-gradient-to-r from-green-50 to-emerald-100 border border-green-200 rounded-2xl p-5 shadow-sm"
+                      >
+
+                        <p className="text-sm font-medium text-gray-600 capitalize mb-1">
+                          {type}
+                        </p>
+
+                        <p className="text-2xl font-bold text-green-900">
+                          {value}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
             )}
-
             {/* 📣 Booking Announcement */}
             {ride.announcement && (
               <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg mb-6 flex items-start">
@@ -112,6 +144,24 @@ const BikeRideDetail = () => {
                 <span className="text-sm font-medium">{ride.announcement}</span>
               </div>
             )}
+            {/* 🟦 Book Now Button */}
+            <div className="mb-8">
+              {ride.bookingEnabled ? (
+                <Link
+                  to={`/book/${ride.id}`}
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200"
+                >
+                  Book Now →
+                </Link>
+              ) : (
+                <button
+                  disabled
+                  className="inline-block bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg shadow cursor-not-allowed opacity-70"
+                >
+                  Booking Unavailable
+                </button>
+              )}
+            </div>
 
             {/* Itinerary */}
             {ride.itinerary && (

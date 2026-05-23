@@ -35,7 +35,7 @@ const Rides = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
-            ✈️ All Getaways
+            All Getaways
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover breathtaking journeys and plan your next unforgettable adventure.
